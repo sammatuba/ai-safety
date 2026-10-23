@@ -1,0 +1,49 @@
+{
+  "_comment": "Source of truth for task routing. INDEX.md mirrors this table. tools/pack.py reads it.",
+  "session": ["AGENTS.md", "STATUS.md"],
+  "concept": ["GLOSSARY.md", "foundations/00-map.md"],
+  "sprint": [
+    "AGENTS.md",
+    "GLOSSARY.md",
+    "projects/2026-10-apart-collusion-sprint/README.md",
+    "projects/2026-10-apart-collusion-sprint/PLAN.md",
+    "projects/2026-10-apart-collusion-sprint/PREREGISTRATION.md",
+    "projects/2026-10-apart-collusion-sprint/design/regimes.md",
+    "projects/2026-10-apart-collusion-sprint/design/auditors.md",
+    "hypotheses/HYPOTHESES.md"
+  ],
+  "sprint-report": [
+    "GLOSSARY.md",
+    "projects/2026-10-apart-collusion-sprint/README.md",
+    "projects/2026-10-apart-collusion-sprint/report/OUTLINE.md",
+    "projects/2026-10-apart-collusion-sprint/PREREGISTRATION.md",
+    "hypotheses/HYPOTHESES.md",
+    "literature/INDEX.md"
+  ],
+  "tara": [
+    "AGENTS.md",
+    "GLOSSARY.md",
+    "projects/2026-11-tara-project/README.md",
+    "projects/2026-11-tara-project/TOPIC-SUBMISSION.md",
+    "hypotheses/HYPOTHESES.md",
+    "literature/INDEX.md"
+  ],
+  "code": ["AGENTS.md", "GLOSSARY.md", "lab/README.md", "hypotheses/HYPOTHESES.md"],
+  "paper": ["literature/EXTRACTION-RULES.md", "literature/templates/PAPER-DOSSIER.md", "literature/INDEX.md", "GLOSSARY.md"],
+  "hypothesis": ["GLOSSARY.md", "hypotheses/HYPOTHESES.md", "hypotheses/threat-models.md", "hypotheses/confounds.md"],
+  "plan": ["AGENTS.md", "ROADMAP.md", "DECISIONS.md", "STATUS.md"],
+  "study": ["study/STUDY-PLAN.md", "GLOSSARY.md", "foundations/00-map.md"],
+  "explainer": ["explainer/README.md", "GLOSSARY.md", "foundations/00-map.md"],
+  "foundations-all": [
+    "GLOSSARY.md",
+    "foundations/00-map.md",
+    "foundations/01-evidence-independence.md",
+    "foundations/02-social-learning.md",
+    "foundations/03-strategic-communication.md",
+    "foundations/04-collusion-and-plus-factors.md",
+    "foundations/05-ai-control-and-oversight.md",
+    "foundations/06-ontology-and-typed-claims.md",
+    "foundations/07-measurement.md",
+    "foundations/08-mechanistic-detection.md"
+  ]
+}

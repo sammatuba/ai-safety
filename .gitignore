@@ -1,0 +1,31 @@
+# environments
+.venv/
+lab/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# secrets
+*.env
+!*.env.example
+lab/.env
+
+# generated outputs
+lab/data/runs/
+lab/data/cache/
+lab/data/*.jsonl
+!lab/data/README.md
+
+# untrusted downloads (keep manifests)
+sources/*
+!sources/README.md
+!sources/MANIFEST.md
+
+# notebooks: percent-format .py is the source of truth
+*.ipynb
+.ipynb_checkpoints/
+
+# os
+.DS_Store
+*:Zone.Identifier
