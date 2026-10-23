@@ -2,6 +2,19 @@
 
 Append-only log. Newest entry first. Each entry: date, what changed, what is blocked, next step.
 
+## 2026-10-23: initial commit pushed
+
+**Changed.** Committed the full repository as `e2025fa` and pushed `main` to the private
+GitHub repository <https://github.com/sammatuba/ai-safety>. The repository is now the
+`origin` remote with `main` tracking `origin/main`. No content changed in this step.
+
+**Verified.** The commit contains 110 files. The working tree was clean before this log
+entry, and `python3 tools/check.py` passed with 0 warnings, 0 broken links, and 0 missing
+routed files.
+
+**Next.** Start the study session with `foundations/00-map.md` and
+`foundations/01-evidence-independence.md`, then answer quiz 01 from memory.
+
 ## 2026-10-23: interactive explainer built and verified
 
 **Changed.** Added `explainer/`, a dependency-free static learning interface over the nine
