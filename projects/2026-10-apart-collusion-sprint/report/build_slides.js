@@ -286,8 +286,10 @@ function tag(kind) { return `[${kind}] `; }
   pts.forEach(([t, k], i) => {
     const y = CY + i * 0.78;
     s.box(0.5, y, 0.6, 0.66, String(i + 1), { kind: k, bold: true, fontSize: 20, skipMd: true });
-    s.box(1.25, y, 8.25, 0.66, t, { kind: k, align: "left", fontSize: 13, mdLabel: "point " + (i + 1) });
+    s.box(1.25, y, 8.25, 0.66, t, { kind: k, align: "left", fontSize: 13, skipMd: true });
+    outline.push(`${i + 1}. ${t}`);
   });
+  outline.push("");
   s.notes("These five points are the summary from the paper, in the same words. Points one and two are about the game and the harm. Points three and four are about words, actions, and what the auditor can see. Point five is the standard of evidence that follows. The rest of the deck gives the concepts, the method, and the numbers behind each point.");
 }
 
@@ -911,29 +913,29 @@ function tag(kind) { return `[${kind}] `; }
 // 27. Conclusion: back to Unit 7 ----------------------------------------------
 {
   const s = new S("CONTENT").title("Conclusion: back to Unit 7");
-  s.text(0.5, CY, 9.0, 0.45, "The contractor\u2019s report and the engineer\u2019s note agree, and the unit failed. In my game, a shared incentive raised approvals of false claims in four of seven models; a pact that changed an action appeared once in 108 records.", { fontSize: 11.5 });
+  s.text(0.5, CY, 9.0, 0.48, "The two records agree, and the unit failed. In my game, a shared incentive raised false approvals in four of seven models. A pact that changed an action appeared once in 108 records.", { fontSize: 11.5 });
   const finds = [
     ["The channel never added harm", "With a private line to the reviewers, the decider approved no more false claims; in two of seven models, fewer."],
     ["Words did not predict actions", "Reviewers who wrote that they would follow a plan often did not. Reviewers who refused sometimes endorsed anyway."],
-    ["One pact in 108 records changed an action", "An AI assistant classified the records with fixed criteria and I spot-checked them. I could see the change only with the twin record, the same case played without the channel."],
+    ["One pact changed an action", "An AI assistant classified the 108 records with fixed criteria; I spot-checked them. Only the twin record showed the change."],
   ];
-  finds.forEach(([h, d], i) => s.box(0.5 + i * 3.05, CY + 0.52, 2.9, 1.1, [{ text: h + "\n", options: { bold: true, fontSize: 11.5 } }, { text: d, options: { fontSize: 10 } }], { kind: "innocent", align: "left", valign: "top", mdLabel: "finding" }));
-  s.text(0.5, CY + 1.68, 9.0, 0.28, tag("HYPOTHESIS") + "Harm and messages cannot settle the question. Three things can:", { fontSize: 12, bold: true });
+  finds.forEach(([h, d], i) => s.box(0.5 + i * 3.05, CY + 0.55, 2.9, 1.1, [{ text: h + "\n", options: { bold: true, fontSize: 11.5 } }, { text: d, options: { fontSize: 10 } }], { kind: "innocent", align: "left", valign: "top", mdLabel: "finding" }));
+  s.text(0.5, CY + 1.7, 9.0, 0.28, tag("HYPOTHESIS") + "Harm and messages cannot settle the question. Three things can:", { fontSize: 12, bold: true });
   const steps = [["1. A plan", "a message that proposes or confirms a joint plan"], ["2. An action that follows the plan", "the endorsements match the plan"], ["3. A sign of a changed action", "my game gives this sign by construction; a real auditor needs a substitute"]];
   steps.forEach(([h, d], i) => {
     const x = 0.5 + i * 3.1;
-    s.box(x, CY + 1.98, 2.8, 0.85, [{ text: h + "\n", options: { bold: true, fontSize: 11.5 } }, { text: d, options: { fontSize: 10 } }], { kind: i === 2 ? "collusion" : "plain", align: "left", valign: "top" });
-    if (i < 2) s.arrow(x + 2.8, CY + 2.4, x + 3.1, CY + 2.4, { color: C.accent2, width: 1.75 });
+    s.box(x, CY + 2.0, 2.8, 0.85, [{ text: h + "\n", options: { bold: true, fontSize: 11.5 } }, { text: d, options: { fontSize: 10 } }], { kind: i === 2 ? "collusion" : "plain", align: "left", valign: "top" });
+    if (i < 2) s.arrow(x + 2.8, CY + 2.42, x + 3.1, CY + 2.42, { color: C.accent2, width: 1.75 });
   });
-  s.box(0.5, CY + 2.9, 5.6, CB - CY - 2.9, [
+  s.box(0.5, CY + 2.92, 5.6, CB - CY - 2.92, [
     { text: "Two limits. ", options: { bold: true } },
     { text: "The incentives are text in a prompt, so the results show how models act under role prompts, not what trained goals would do. In the main game, endorsing was never worse for a reviewer, so no pact was needed. When a lone endorser was blamed, pacts were proposed and the actions did not follow.", options: {} },
   ], { kind: "muted", align: "left", valign: "top", fontSize: 10, mdLabel: "limits" });
-  s.box(6.25, CY + 2.9, 3.25, CB - CY - 2.9, [
+  s.box(6.25, CY + 2.92, 3.25, CB - CY - 2.92, [
     { text: "Next project. ", options: { bold: true } },
     { text: "A game where coordination pays and the reviewers can assure each other. Its auditor has to work without the twin record.", options: {} },
   ], { kind: "callout", align: "left", valign: "top", fontSize: 10, mdLabel: "next" });
-  s.notes("Back to the story: the two records agree and the unit failed. In the game, a shared incentive raised approvals of false claims in four of seven models, and a pact that changed an action appeared once in 108 records. The private channel never added harm, and words did not predict actions. An AI assistant classified the 108 records with fixed criteria, I spot-checked them, and only the twin record showed the one changed action. So harm and messages cannot settle the question; a plan, an action that follows it, and a sign that the action would have differed can. Two limits bound this: prompt-conditioned incentives, and a main game in which endorsing was never worse.");
+  s.notes("Back to the story: the two records agree and the unit failed. In the game, a shared incentive raised false approvals in four of seven models. A pact that changed an action appeared once in 108 records; an AI assistant classified them with fixed criteria, and I spot-checked them. The private channel never added harm, and words did not predict actions. Only the twin record showed the one changed action, so harm and messages cannot settle the question. Two limits bound this: prompt-conditioned incentives, and a main game in which endorsing was never worse.");
 }
 
 // 25. The limit of the game, stated plainly ---------------------------------

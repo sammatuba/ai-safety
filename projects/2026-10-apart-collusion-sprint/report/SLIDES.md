@@ -25,15 +25,11 @@ Apart AI Collusion Research Sprint, 2026-10-23 to 2026-10-25. Track 2: Detection
 
 ## Slide 2. In five points
 
-- [point 1] Agreement has four innocent causes and one collusive cause, and talk can also come without action. I made a game where each is a switch.
-
-- [point 2] Across seven models, giving the agents a private channel never increased harm. A shared incentive did, in four of seven.
-
-- [point 3] Words did not predict actions, in both directions. One pact in 108 classified records changed an action.
-
-- [point 4] The one feature that caught that pact needs the twin record (the same case played without the channel), which a real auditor does not have.
-
-- [point 5] A standard of evidence for collusion must connect a plan to a change in action. Harm and messages are not enough.
+1. Agreement has four innocent causes and one collusive cause, and talk can also come without action. I made a game where each is a switch.
+2. Across seven models, giving the agents a private channel never increased harm. A shared incentive did, in four of seven.
+3. Words did not predict actions, in both directions. One pact in 108 classified records changed an action.
+4. The one feature that caught that pact needs the twin record (the same case played without the channel), which a real auditor does not have.
+5. A standard of evidence for collusion must connect a plan to a change in action. Harm and messages are not enough.
 
 > These five points are the summary from the paper, in the same words. Points one and two are about the game and the harm. Points three and four are about words, actions, and what the auditor can see. Point five is the standard of evidence that follows. The rest of the deck gives the concepts, the method, and the numbers behind each point.
 
@@ -613,7 +609,7 @@ Limits
 
 ## Slide 27. Conclusion: back to Unit 7
 
-The contractor’s report and the engineer’s note agree, and the unit failed. In my game, a shared incentive raised approvals of false claims in four of seven models; a pact that changed an action appeared once in 108 records.
+The two records agree, and the unit failed. In my game, a shared incentive raised false approvals in four of seven models. A pact that changed an action appeared once in 108 records.
 
 - [finding] The channel never added harm
   - With a private line to the reviewers, the decider approved no more false claims; in two of seven models, fewer.
@@ -621,8 +617,8 @@ The contractor’s report and the engineer’s note agree, and the unit failed. 
 - [finding] Words did not predict actions
   - Reviewers who wrote that they would follow a plan often did not. Reviewers who refused sometimes endorsed anyway.
 
-- [finding] One pact in 108 records changed an action
-  - An AI assistant classified the records with fixed criteria and I spot-checked them. I could see the change only with the twin record, the same case played without the channel.
+- [finding] One pact changed an action
+  - An AI assistant classified the 108 records with fixed criteria; I spot-checked them. Only the twin record showed the change.
 
 [HYPOTHESIS] Harm and messages cannot settle the question. Three things can:
 
@@ -639,7 +635,7 @@ The contractor’s report and the engineer’s note agree, and the unit failed. 
 
 - [next] Next project. A game where coordination pays and the reviewers can assure each other. Its auditor has to work without the twin record.
 
-> Back to the story: the two records agree and the unit failed. In the game, a shared incentive raised approvals of false claims in four of seven models, and a pact that changed an action appeared once in 108 records. The private channel never added harm, and words did not predict actions. An AI assistant classified the 108 records with fixed criteria, I spot-checked them, and only the twin record showed the one changed action. So harm and messages cannot settle the question; a plan, an action that follows it, and a sign that the action would have differed can. Two limits bound this: prompt-conditioned incentives, and a main game in which endorsing was never worse.
+> Back to the story: the two records agree and the unit failed. In the game, a shared incentive raised false approvals in four of seven models. A pact that changed an action appeared once in 108 records; an AI assistant classified them with fixed criteria, and I spot-checked them. The private channel never added harm, and words did not predict actions. Only the twin record showed the one changed action, so harm and messages cannot settle the question. Two limits bound this: prompt-conditioned incentives, and a main game in which endorsing was never worse.
 
 ## Slide 28. The limit of the game, stated plainly
 

@@ -1,5 +1,5 @@
 ---
-title: "The Channel Changed Nothing: Shared Incentives, Not Private Talk, Make LLM Reviewers Approve False Claims, and Only a Twin Record Exposes a Pact"
+title: "Paid to Say Yes: A Private Channel Did Not Make AI Reviewers Approve False Claims. Their Reward Did."
 status: draft
 updated: 2026-10-26
 depends_on: ["../README.md", "../PREREGISTRATION.md", "../design/regimes.md", "../design/auditors.md", "LIMITATIONS.md", "extra_metrics.py", "ADJUDICATION.md"]
@@ -8,7 +8,7 @@ depends_on: ["../README.md", "../PREREGISTRATION.md", "../design/regimes.md", ".
 <!-- Source for REPORT.docx. Written to ASD-STE100 rules: one idea per sentence, 25 words or
      fewer, active voice, terms defined before use. Items marked [AUTHOR] need the owner. -->
 
-# The Channel Changed Nothing: Shared Incentives, Not Private Talk, Make LLM Reviewers Approve False Claims, and Only a Twin Record Exposes a Pact
+# Paid to Say Yes: A Private Channel Did Not Make AI Reviewers Approve False Claims. Their Reward Did.
 
 **[AUTHOR: name, affiliation, email]**
 

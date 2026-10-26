@@ -4,8 +4,7 @@ Append-only log. Newest entry first. Each entry: date, what changed, what is blo
 
 ## 2026-10-26: final title; review pass applied; rubric items; repository published
 
-**Title (final):** "The Channel Changed Nothing: Shared Incentives, Not Private Talk, Make LLM
-Reviewers Approve False Claims, and Only a Twin Record Exposes a Pact" (finding first, setting
+**Title (final):** "Paid to Say Yes: A Private Channel Did Not Make AI Reviewers Approve False Claims. Their Reward Did." (finding first, setting
 second, as in the sample submissions; "Agreement Is Not Collusion" was dropped because two
 submissions already use that form). Explainer title updated; deck title delegated.
 **Review pass (40 items from an outside-reader review agent) applied to REPORT.md:** the abstract
