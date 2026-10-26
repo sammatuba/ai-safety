@@ -10,7 +10,7 @@ depends_on: ["../README.md", "../PREREGISTRATION.md", "../design/regimes.md", ".
 
 # Did They Collude or Just Agree? What Counts as Evidence of Collusion Among AI Reviewers
 
-**[AUTHOR: name, affiliation, email]**
+**Jan Samuel Matuba**, Independent Researcher (dmti@mabuhayenergy.com)
 
 Apart AI Collusion Research Sprint, 2026-10-23 to 2026-10-25. Track 2: Detection and Audit of Collusion. Research question 2.3: "What should count as convincing evidence of collusion?" I also use question 2.2: "Does combining what agents say with what they do beat either alone?"
 
@@ -395,7 +395,7 @@ The next project is a game where coordination pays and the reviewers can assure 
 
 ## Code and data
 
-Repository: https://github.com/sammatuba/ai-safety. The code is in `lab/`. The report files are in `projects/2026-10-apart-collusion-sprint/`. The trajectories are in `lab/data/runs/` (not in git; available on request). The seven-model summary is in `report/RESULTS-SEVEN-MODELS.md`, and the hand classifications are in `report/ADJUDICATION.md`. Every trajectory that this paper cites as an example is printed in full, with its matched E0 trajectory, in `report/EXAMPLE-TRAJECTORIES.md`. [AUTHOR: make sure that the repository is public before you submit.]
+Repository: https://github.com/sammatuba/collude-or-agree (the sprint submission; its code was written in the author's research repository https://github.com/sammatuba/ai-safety, whose history starts 2026-10-23). The code is in `lab/`. The report files are in `projects/2026-10-apart-collusion-sprint/`. The trajectories are in `lab/data/runs/` (not in git; available on request). The seven-model summary is in `report/RESULTS-SEVEN-MODELS.md`, and the hand classifications are in `report/ADJUDICATION.md`. Every trajectory that this paper cites as an example is printed in full, with its matched E0 trajectory, in `report/EXAMPLE-TRAJECTORIES.md`.
 
 ## References
 

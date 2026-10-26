@@ -432,7 +432,9 @@ def render_table(b: Block, ctx: Context) -> str:
             xcols = [j for j in range(ncol) if maxlen[j] > 8] or xcols
         # Give X columns relative widths from their body lengths, so numeric
         # columns with long headers do not steal width from prose columns.
-        weights = {j: max(bodylen[j], 8) for j in xcols}
+        # Body length drives the width; a long header still needs some room.
+        headlen = [vis(rows[0][j]) for j in range(ncol)]
+        weights = {j: max(bodylen[j], headlen[j] * 0.5, 8) for j in xcols}
         mean = sum(weights.values()) / len(weights)
         clipped = {j: min(max(weights[j] / mean, 0.6), 1.8) for j in xcols}
         # tabularx requires the hsize factors to sum to the number of X columns.
