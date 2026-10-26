@@ -116,13 +116,20 @@ def escape(text: str, line_no: int = 0) -> str:
 
 
 def escape_tt(text: str) -> str:
-    """Escape for \\texttt{}: specials only; keep quotes and dashes literal."""
+    """Escape for \\texttt{}: specials only; keep quotes and dashes literal.
+
+    Long spans (paths, environment settings) get a break opportunity after
+    / _ - . = so they do not run into the margin.
+    """
     out = []
+    brk = "\\allowbreak{}" if len(text) > 20 else ""
     for ch in text:
         if ch in SPECIALS:
-            out.append(SPECIALS[ch])
+            out.append(SPECIALS[ch] + (brk if ch == "_" else ""))
         elif ch == "-":
-            out.append("-{}")  # prevent -- ligature inside typewriter text
+            out.append("-{}" + brk)  # prevent -- ligature inside typewriter text
+        elif ch in "/.=":
+            out.append(ch + brk)
         elif ch in UNICODE_MAP:
             out.append(UNICODE_MAP[ch])
         else:
