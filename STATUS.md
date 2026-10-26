@@ -2,6 +2,19 @@
 
 Append-only log. Newest entry first. Each entry: date, what changed, what is blocked, next step.
 
+## 2026-10-26: paper cut to the 8-page cap; conclusion rewritten for AI safety
+
+**Owner:** 8-page hard cap up to the conclusion; shorten; concise introduction and discussion;
+self-contained conclusion in AI-safety terms rather than the Unit 7 narrative. **Done:** body text
+cut from 6,300 to about 3,250 words (plus 4 tables and 1 figure in the body). Moved to Appendix F:
+Table A (models), Table 2 (contrasts; Figure 2 keeps them in the body), Table 3 (classification),
+Tables 4 to 7, Figures 1, 3, 4, 5, 6. The five-point summary after the abstract was dropped (it
+stays in the deck and the explainer). Body tables kept: three settings in prose, the questions
+table, the regime table, the slice table. Page count measured with a LaTeX proxy (11 pt, 1-inch
+margins, tectonic): the body ends on page 8; the owner must confirm in Word with the template.
+Conclusion: two paragraphs, self-contained, framed as oversight-of-AI findings and implications.
+STE 0 long sentences. REPORT.docx and REPORT-APART.docx rebuilt; both repositories pushed.
+
 ## 2026-10-26: paper citations numbered; epistemic labels removed from the paper
 
 **Owner:** the [S1]/[R12] ids and the [FINDING]/[INTERPRETATION] tags are repository conventions, not
