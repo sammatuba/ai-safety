@@ -2,6 +2,18 @@
 
 Append-only log. Newest entry first. Each entry: date, what changed, what is blocked, next step.
 
+## 2026-10-26: paper citations numbered; epistemic labels removed from the paper
+
+**Owner:** the [S1]/[R12] ids and the [FINDING]/[INTERPRETATION] tags are repository conventions, not
+paper style. **Done:** citations in REPORT.md are now numbered in order of first appearance ([1] to
+[18]; the reference list is a numbered list in that order; [W3], the sprint page, was uncited and
+dropped; the Appendix B sentence now names the source-index rows S27 to S46 in code font). Both
+converters (`tools/md2docx.js`, `tools/md2apart.py`) render [n] and [n, m] as superscripts. All
+30 epistemic tags removed from the paper; interpretation paragraphs in the Results start with
+"Interpretation." and the two hypotheses say "My hypothesis is"; the Discussion headings carry the
+rest. The guide, explainer, and design files keep the repository conventions. REPORT.docx and
+REPORT-APART.docx rebuilt and validated (0 labels, 26 superscript runs).
+
 ## 2026-10-26: independent submission; template build; dedicated repository
 
 **Owner decisions:** author line "Jan Samuel Matuba, Independent Researcher (jscmatuba@gmail.com)";
