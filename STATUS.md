@@ -2,6 +2,23 @@
 
 Append-only log. Newest entry first. Each entry: date, what changed, what is blocked, next step.
 
+## 2026-10-26: independent submission; template build; dedicated repository
+
+**Owner decisions:** author line "Jan Samuel Matuba, Independent Researcher (jscmatuba@gmail.com)";
+no company affiliation anywhere; no Grid Nowcast prior-work disclosure (unpublished hackathon
+notes, not prior work); no clock times in the submission (the question and the framework were
+worked out in the week before the sprint as notes; all code, runs, analysis, and the report were
+made during the sprint); the submission lives in its own public repository
+https://github.com/sammatuba/collude-or-agree (same folder layout, made by
+`tools/export_sprint_repo.sh`; README from `tools/sprint-repo-README.md`). The paper's Appendix B
+is now "Preexisting work and LLM usage statement" (the template's section name).
+**Template build:** `tools/md2apart.py` (delegated agent) builds `report/REPORT-APART.docx` on the
+official Apart template from REPORT.md (fonts, styles, page setup kept; guidance removed; 6
+figures, 17 tables, hyperlinks); validate.py passes with and without the template as original.
+The owner will review it and export the PDF from Word. The LaTeX build was stopped as not needed.
+**Scrubbed:** paper, guide, deck, lab README, project README, both repository READMEs. Deck
+rebuilt (pptxgenjs reinstalled in /tmp/slides-npm). REPORT.docx and GUIDE.docx rebuilt.
+
 ## 2026-10-26: final title; review pass applied; rubric items; repository published
 
 **Title (final):** "Did They Collude or Just Agree? What Counts as Evidence of Collusion Among AI Reviewers" (the core question and the setting; the owner rejected two finding-first titles as narrow or long; "Agreement Is Not Collusion" was dropped because two
