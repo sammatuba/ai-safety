@@ -4,8 +4,7 @@ Append-only log. Newest entry first. Each entry: date, what changed, what is blo
 
 ## 2026-10-26: final title; review pass applied; rubric items; repository published
 
-**Title (final):** "Paid to Say Yes: A Private Channel Did Not Make AI Reviewers Approve False Claims. Their Reward Did." (finding first, setting
-second, as in the sample submissions; "Agreement Is Not Collusion" was dropped because two
+**Title (final):** "Did They Collude or Just Agree? What Counts as Evidence of Collusion Among AI Reviewers" (the core question and the setting; the owner rejected two finding-first titles as narrow or long; "Agreement Is Not Collusion" was dropped because two
 submissions already use that form). Explainer title updated; deck title delegated.
 **Review pass (40 items from an outside-reader review agent) applied to REPORT.md:** the abstract
 and conclusion now say that an AI assistant classified the 108 records with fixed criteria and

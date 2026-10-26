@@ -29,7 +29,7 @@ it. Every citation points to a verified source.
 
 ## Apart AI Collusion Research Sprint submission (Track 2, question 2.3)
 
-**Paper:** *Paid to Say Yes: A Private Channel Did Not Make AI Reviewers Approve False Claims. Their Reward Did.* Single author: Sam Matuba.
+**Paper:** *Did They Collude or Just Agree? What Counts as Evidence of Collusion Among AI Reviewers* Single author: Sam Matuba.
 
 Two reviewers vouch for a claim, and the claim turns out to be false. Did they collude, or only
 agree? A small review game (proposer, two reviewers, decider, auditor) turns each cause of
