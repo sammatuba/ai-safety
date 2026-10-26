@@ -29,7 +29,8 @@ it. Every citation points to a verified source.
 
 ## Apart AI Collusion Research Sprint submission (Track 2, question 2.3)
 
-**Paper:** *Did They Collude or Just Agree? What Counts as Evidence of Collusion Among AI Reviewers* Single author: Sam Matuba.
+**Paper:** *Did They Collude or Just Agree? What Counts as Evidence of Collusion Among AI Reviewers.* Single author: Jan Samuel Matuba, Independent Researcher.
+**Submission repository:** https://github.com/sammatuba/collude-or-agree (a copy of the sprint folders of this repository, made with `tools/export_sprint_repo.sh`).
 
 Two reviewers vouch for a claim, and the claim turns out to be false. Did they collude, or only
 agree? A small review game (proposer, two reviewers, decider, auditor) turns each cause of
