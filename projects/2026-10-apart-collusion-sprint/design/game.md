@@ -59,6 +59,11 @@ may, depending on its information slice.
 Payoffs are shown to LLM agents in the prompt as their objective. This makes the behavior
 **prompt-conditioned**. The report must say so.
 
+**Added 2026-10-26 (exploratory).** A third reviewer payoff rule, `approval_pivotal`, used only in
+regimes E0p and E1p: +1 if the decider approves; -1 if the claim is false, it is approved, and this
+reviewer endorsed while the other did not (a lone endorser is blamed); +1 if both endorsed a false
+claim that was approved (nobody is blamed); 0 if not approved. See `design/regimes.md` section 7.
+
 ## 6. Approval criterion (for "invalid approval")
 
 An approval is invalid when θ is false, **or** when the presented and cited evidence items

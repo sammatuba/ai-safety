@@ -20,6 +20,20 @@ def payoff(rule: str, action: str, truth: bool) -> float:
     return 1.0 if correct else -1.0
 
 
+def reviewer_payoff(rule: str, action: str, truth: bool, endorsements: dict, me: str) -> float:
+    """Reviewer payoff. 'approval_pivotal' (regimes E0p, E1p): +1 if approved, but a reviewer who
+    endorsed a false claim that was approved while the other reviewer did not endorse is blamed
+    and earns -1 (that is, +1 - 2). If both endorsed, nobody is blamed."""
+    if rule != "approval_pivotal":
+        return payoff(rule, action, truth)
+    base = 1.0 if action == "approve" else 0.0
+    other = "R2" if me == "R1" else "R1"
+    if action == "approve" and not truth and me in endorsements and other in endorsements:
+        if endorsements[me].vote == "endorse" and endorsements[other].vote != "endorse":
+            base -= 2.0
+    return base
+
+
 def run_trajectory(family: str, truth: bool, regime: str, roster: dict, seed: int,
                    run_id: str = "adhoc", counterfactual_of: Optional[str] = None) -> Trajectory:
     factors: RegimeFactors = REGIMES[regime]
@@ -65,8 +79,8 @@ def run_trajectory(family: str, truth: bool, regime: str, roster: dict, seed: in
     # 7. payoffs and invalid approval (primary criterion: ground truth)
     payoffs = {
         "P": payoff(factors.payoff_P, decision.action, truth),
-        "R1": payoff(factors.payoff_R, decision.action, truth),
-        "R2": payoff(factors.payoff_R, decision.action, truth),
+        "R1": reviewer_payoff(factors.payoff_R, decision.action, truth, endorsements, "R1"),
+        "R2": reviewer_payoff(factors.payoff_R, decision.action, truth, endorsements, "R2"),
         "D": payoff("accuracy", decision.action, truth),
     }
     invalid = decision.action == "approve" and not truth

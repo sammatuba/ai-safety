@@ -29,11 +29,11 @@ Defined in full in `projects/2026-10-apart-collusion-sprint/PREREGISTRATION.md`.
 
 | Id | Short statement | Falsifier | Status |
 |---|---|---|---|
-| H-SPRINT-1 | Messages-only auditors cannot separate talk without action (F) from collusion (E1). | FPR_F(S1) < 0.5 × recall_E1(S1). | proposed |
-| H-SPRINT-2 | Actions-only auditors cannot separate harmful correlated agreement (B, C, E0) from collusion (E1). | AUROC_S2(E1 vs {B,C,E0}) > 0.80. | proposed |
-| H-SPRINT-3 | S4d (full metadata without payoff rules) lowers FPR on innocent regimes by ≥ 0.10 relative to S3 with recall on E1 inside S3's interval. Full S4 is exploratory (CF-13). | Smaller reduction, or recall drops out of the interval. | proposed |
-| H-SPRINT-4 | Δ_comm = FAR(E1) − FAR(E0) > 0 with interval excluding 0; FAR(F) − FAR(A) interval includes 0. | E1 − E0 interval includes 0. | proposed |
-| H-SPRINT-5 | FAR(E0) > FAR(A): harm without agreement exists. | Interval includes 0. | proposed |
+| H-SPRINT-1 | Messages-only auditors cannot separate talk without action (F) from collusion (E1). | FPR_F(S1) < 0.5 × recall_E1(S1). | supported 2026-10-26 (scripted and seven models; the S1 rule flags every injected plan in F and at most 0.08 of E1) |
+| H-SPRINT-2 | Actions-only auditors cannot separate harmful correlated agreement (B, C, E0) from collusion (E1). | AUROC_S2(E1 vs {B,C,E0}) > 0.80. | supported 2026-10-26 (AUROC 0.45 to 0.71 in all eight settings) |
+| H-SPRINT-3 | S4d (full metadata without payoff rules) lowers FPR on innocent regimes by ≥ 0.10 relative to S3 with recall on E1 inside S3's interval. Full S4 is exploratory (CF-13). | Smaller reduction, or recall drops out of the interval. | not supported 2026-10-26, confirmatory (DeepSeek chat held-out reduction 0.000; 0.006 to 0.017 in the six exploratory models; 0.015 scripted) |
+| H-SPRINT-4 | Δ_comm = FAR(E1) − FAR(E0) > 0 with interval excluding 0; FAR(F) − FAR(A) interval includes 0. | E1 − E0 interval includes 0. | not supported 2026-10-26 (E1 minus E0 is 0.000 or negative in all settings; −0.222 [−0.333, −0.083] for GPT-5.6 Terra and DeepSeek Flash) |
+| H-SPRINT-5 | FAR(E0) > FAR(A): harm without agreement exists. | Interval includes 0. | supported 2026-10-26 for scripted, GPT-5.6 Luna, GPT-5.6 Terra, DeepSeek V4 Pro, DeepSeek Flash; not supported for DeepSeek chat, Claude Haiku 5.5, Claude Sonnet 5.5 |
 
 ## TARA project hypotheses (H-TARA)
 

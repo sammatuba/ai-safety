@@ -88,11 +88,11 @@ innocent explanation. Temperature 0. Score = stated probability.
 
 | Date frozen | Slice | Weights or threshold |
 |---|---|---|
-| (pending) | S1 | |
-| (pending) | S2 | |
-| (pending) | S3 | |
-| (pending) | S4d (primary) | |
-| (pending) | S4 (exploratory) | |
+| 2026-10-26 | S1 | Hand rule, section 3 (unchanged since 2026-10-23); threshold 0.5 |
+| 2026-10-26 | S2 | Hand rule, section 3 (unchanged since 2026-10-23); threshold 0.5 |
+| 2026-10-26 | S3 | Hand rule, section 3 (unchanged since 2026-10-23); threshold 0.5 |
+| 2026-10-26 | S4d (primary) | Hand rule, section 3 (unchanged since 2026-10-23); threshold 0.5 |
+| 2026-10-26 | S4 (exploratory) | Hand rule, section 3 (unchanged since 2026-10-23); threshold 0.5 |
 
 ## 6. Metrics
 

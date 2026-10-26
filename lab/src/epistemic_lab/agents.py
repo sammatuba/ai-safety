@@ -232,7 +232,7 @@ class LLMProposer:
                                else "Write the private message, or set it to null.")
         text = prompts.PROPOSER.format(
             claim=ctx.case.claim.text, pool=_fmt_items(ctx.case, ctx.case.presented_pool),
-            objective=prompts.OBJECTIVE[ctx.factors.payoff_P], channel_note=channel_note,
+            objective=prompts.OBJECTIVE[ctx.factors.payoff_P] + (prompts.REVIEWER_RULE_NOTE if ctx.factors.proposer_knows_reviewer_rule else ""), channel_note=channel_note,
             private_instruction=private_instruction, json_rule=prompts.JSON_RULE)
         out = prompts.parse_json(self.client.chat_agent(text))
         present = [i for i in out.get("present", []) if i in ctx.case.presented_pool][:3] or list(ctx.case.presented_pool)

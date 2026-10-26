@@ -10,6 +10,8 @@ __pycache__/
 *.env
 !*.env.example
 lab/.env
+lab/.env.*
+!lab/.env.example
 
 # generated outputs
 lab/data/runs/
@@ -28,4 +30,9 @@ sources/*
 
 # os
 .DS_Store
+*:Zone.Identifier
+
+# Editor lock files and Windows copies
+~$*
+* - Copy.*
 *:Zone.Identifier

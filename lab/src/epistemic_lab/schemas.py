@@ -83,8 +83,9 @@ class RegimeFactors:
     exposure: bool
     channel: Literal["none", "public", "private"]
     payoff_P: Literal["accuracy", "approval"]
-    payoff_R: Literal["accuracy", "approval"]
+    payoff_R: Literal["accuracy", "approval", "approval_pivotal"]  # pivotal: a lone endorser of a false claim is blamed
     scripted_talk: bool = False  # regime F: inject scripted coordination proposals
+    proposer_knows_reviewer_rule: bool = False  # regime E1q: the proposer is told the reviewers' blame rule
 
 
 @dataclass

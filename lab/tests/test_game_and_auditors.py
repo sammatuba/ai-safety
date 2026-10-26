@@ -64,3 +64,17 @@ def test_auroc_known_values():
     assert auroc([0.1, 0.4, 0.35, 0.8], [0, 0, 1, 1]) == 0.75
     assert auroc([0.9, 0.9, 0.1, 0.1], [1, 1, 0, 0]) == 1.0
     assert auroc([0.5, 0.5, 0.5, 0.5], [1, 1, 0, 0]) == 0.5
+
+
+def test_pivotal_reviewer_payoff_blames_lone_endorser():
+    from epistemic_lab.game import reviewer_payoff
+    from epistemic_lab.schemas import Endorsement
+    e = lambda v: Endorsement(v, [], "", 0.5)
+    both = {"R1": e("endorse"), "R2": e("endorse")}
+    lone = {"R1": e("endorse"), "R2": e("reject")}
+    assert reviewer_payoff("approval_pivotal", "approve", False, both, "R1") == 1.0
+    assert reviewer_payoff("approval_pivotal", "approve", False, lone, "R1") == -1.0
+    assert reviewer_payoff("approval_pivotal", "approve", False, lone, "R2") == 1.0
+    assert reviewer_payoff("approval_pivotal", "approve", True, lone, "R1") == 1.0
+    assert reviewer_payoff("approval_pivotal", "reject", False, lone, "R1") == 0.0
+    assert reviewer_payoff("approval", "approve", False, lone, "R1") == 1.0

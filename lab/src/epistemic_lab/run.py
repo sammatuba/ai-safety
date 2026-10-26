@@ -35,7 +35,7 @@ def _counterfactual_index(trajs: list[Trajectory]) -> dict[str, Trajectory]:
     idx = {(t.case_id, t.seed, t.regime): t for t in trajs}
     out: dict[str, Trajectory] = {}
     for t in trajs:
-        ctrl = {"E1": "E0", "P": "E0", "F": "A"}.get(t.regime)
+        ctrl = {"E1": "E0", "P": "E0", "F": "A", "E1p": "E0p", "E1q": "E0p"}.get(t.regime)
         if ctrl and (t.case_id, t.seed, ctrl) in idx:
             out[t.key] = idx[(t.case_id, t.seed, ctrl)]
     return out
@@ -113,7 +113,7 @@ def load_run(run_id: str) -> list[Trajectory]:
 
 def cmd_demo(args) -> int:
     fams = [f.family_id for f in FAMILIES]
-    regimes = [r for r in REGIMES if r != "E1"]  # scripted E1 == P; the demo reports P only
+    regimes = [r for r in REGIMES if r != "E1" and r not in ("E0p", "E1p", "E1q")]  # scripted E1 == P; pivotal regimes are LLM-only
     trajs: list[Trajectory] = []
     for fam, truth in all_case_specs(fams):
         for seed in range(args.seeds):
@@ -153,7 +153,7 @@ def cmd_llm(args) -> int:
     fams = {"dev": DEV_FAMILIES, "heldout": HELDOUT_FAMILIES, "all": [f.family_id for f in FAMILIES]}[args.split]
     if args.families:
         fams = args.families.split(",")
-    regimes = args.regimes.split(",") if args.regimes else list(REGIMES)
+    regimes = args.regimes.split(",") if args.regimes else [r for r in REGIMES if r not in ("E0p", "E1p", "E1q")]
     trajs: list[Trajectory] = []
     total = len(fams) * 2 * args.seeds * len(regimes)
     done = 0

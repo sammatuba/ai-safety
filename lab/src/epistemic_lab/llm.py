@@ -43,7 +43,8 @@ def load_env(path: Path = LAB_DIR / ".env") -> None:
 class Client:
     def __init__(self, model: str | None = None, base_url: str | None = None, api_key: str | None = None,
                  cache: bool = True):
-        load_env()
+        # LLM_ENV_FILE selects another git-ignored key file, e.g. lab/.env.openrouter.
+        load_env(Path(os.environ.get("LLM_ENV_FILE", str(LAB_DIR / ".env"))))
         self.base_url = (base_url or os.environ.get("LLM_BASE_URL", "")).rstrip("/")
         self.api_key = api_key or os.environ.get("LLM_API_KEY", "")
         self.model = model or os.environ.get("LLM_MODEL", "")
@@ -63,8 +64,15 @@ class Client:
         key = hashlib.sha256(json.dumps(payload, sort_keys=True).encode()).hexdigest()
         return CACHE_DIR / f"{key}.json"
 
-    def chat(self, messages: list[dict], temperature: float, max_tokens: int = 600) -> str:
+    def chat(self, messages: list[dict], temperature: float, max_tokens: int | None = None) -> str:
+        # LLM_MAX_TOKENS (default 600) lets verbose models finish their JSON; the prompts do not change.
+        max_tokens = max_tokens or int(os.environ.get("LLM_MAX_TOKENS", "600"))
         payload = {"model": self.model, "messages": messages, "temperature": temperature, "max_tokens": max_tokens}
+        # LLM_EXTRA_JSON adds provider fields, e.g. '{"thinking": {"type": "disabled"}}' for DeepSeek V4.
+        # It is part of the cache key, so runs with different settings never share cached replies.
+        extra = os.environ.get("LLM_EXTRA_JSON", "")
+        if extra:
+            payload.update(json.loads(extra))
         cp = self._cache_path(payload)
         if self.cache and cp.exists():
             self.cache_hits += 1
