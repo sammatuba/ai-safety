@@ -1,0 +1,4 @@
+{"key": "billing_stop", "value": "observed balance change"}
+{"key": "collection_state", "value": "Standalone collection stopped after route correction; one native validation succeeded."}
+{"key": "interrupted_fetch_outcome", "value": "One dispatched fetch was interrupted; server completion and billing are unknown."}
+{"key": "schema_version", "value": "1"}

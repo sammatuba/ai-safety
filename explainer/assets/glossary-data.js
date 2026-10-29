@@ -12,7 +12,10 @@ window.GLOSSARY_DATA = {
     "Mechanistic terms (for the TARA project)",
     "Formal game-theory terms (used in foundations/02 and 03)",
     "Protocol and validator terms (used in foundations/05 and 06)",
-    "Additional mechanistic terms (used in foundations/08)"
+    "Additional mechanistic terms (used in foundations/08)",
+    "Landscape database terms",
+    "Landscape topic definitions",
+    "Brainstorming concepts"
   ],
   "terms": [
     {
@@ -650,6 +653,774 @@ window.GLOSSARY_DATA = {
       "term": "nuisance variable",
       "definition": "A variable correlated with the label that the probe could read instead of the label. Regime wording and prompt template are the main ones here.",
       "banned": "confound (reserve for the experiment-design sense), leakage"
+    },
+    {
+      "section": "Landscape database terms",
+      "term": "knowledge graph",
+      "definition": "A collection of named entities and typed relations, with provenance and review status recorded for each factual relation.",
+      "banned": "knowledge base (when specifically referring to graph structure)"
+    },
+    {
+      "section": "Landscape database terms",
+      "term": "mind map",
+      "definition": "A hierarchical navigation view of research topics. Its parent relationships are editorial choices, not empirical findings.",
+      "banned": "taxonomy (unless describing a source's taxonomy)"
+    },
+    {
+      "section": "Landscape database terms",
+      "term": "source record",
+      "definition": "A database record for a research resource, including its URL, discovery history, retrieval status, and bibliographic review status.",
+      "banned": "verified paper (unless the paper has been reviewed)"
+    },
+    {
+      "section": "Landscape database terms",
+      "term": "retrieval snapshot",
+      "definition": "An immutable downloaded response stored with a retrieval time, request identity, and SHA-256 content hash.",
+      "banned": "ground truth"
+    },
+    {
+      "section": "Landscape database terms",
+      "term": "coverage facet",
+      "definition": "One planned search perspective, such as counterevidence, datasets, or open questions, applied consistently across research areas.",
+      "banned": "completeness score"
+    },
+    {
+      "section": "Landscape database terms",
+      "term": "candidate claim",
+      "definition": "A source-attributed proposition awaiting review against a retrieval snapshot. It is not an accepted research finding.",
+      "banned": "verified finding"
+    },
+    {
+      "section": "Landscape database terms",
+      "term": "review status",
+      "definition": "The recorded stage of checking a database record. Retrieval, extraction, and substantive verification are separate stages.",
+      "banned": "confidence score (a different measurement)"
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Alignment objectives and generalization",
+      "definition": "What should an AI system pursue, and when do intended objectives fail to generalize?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Outer alignment",
+      "definition": "Whether the specified training objective matches the intended behavior.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Inner alignment",
+      "definition": "Whether a learned objective matches the objective used to train the model.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Goal misgeneralization",
+      "definition": "Competent pursuit of an unintended objective after conditions change.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Corrigibility",
+      "definition": "Behavior that permits useful human correction, modification, and shutdown.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Learning objectives and feedback",
+      "definition": "How do training signals shape behavior and create incentives?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Reward modeling",
+      "definition": "Learning a model of feedback that provides a training signal.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Preference learning",
+      "definition": "Learning desired behavior from comparisons or other preference information.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Reward hacking",
+      "definition": "Behavior that raises measured reward while violating the intended objective.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Process supervision",
+      "definition": "Feedback on intermediate steps rather than only final outcomes.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Scalable oversight and AI control",
+      "definition": "How can oversight remain useful when agents are more capable or intentionally subversive?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Scalable oversight",
+      "definition": "Methods for evaluating work that exceeds direct human assessment.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "AI debate",
+      "definition": "Oversight through competing arguments evaluated by a decider.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Control protocols",
+      "definition": "Protocols evaluated under explicit assumptions about untrusted agents.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Trusted monitoring",
+      "definition": "Inspection of agent behavior during execution with authority to flag or block actions.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Interpretability and internal measurements",
+      "definition": "What internal computations explain behavior, and which measurements transfer?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Mechanistic interpretability",
+      "definition": "Study of model computations through internal components and interventions.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Representation analysis",
+      "definition": "Study of information readable from model activations.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Causal interventions",
+      "definition": "Deliberate changes used to test whether internal components affect behavior.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Interpretability validation",
+      "definition": "Tests that an internal explanation predicts behavior beyond its discovery setting.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Evaluations and assurance",
+      "definition": "What do safety measurements establish, and what decisions can they justify?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Behavioral evaluations",
+      "definition": "Tests based on model actions or outputs under specified conditions.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Evaluation validity",
+      "definition": "Whether a measurement supports its intended interpretation.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Red teaming",
+      "definition": "Deliberate search for failures under a stated threat model.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Safety cases",
+      "definition": "Structured arguments linking safety claims, evidence, assumptions, and rebuttals.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Robustness and uncertainty",
+      "definition": "How does behavior change under distribution shifts, perturbations, and uncertainty?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Distribution shift",
+      "definition": "A change between the conditions used for development and those of evaluation or deployment.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Adversarial robustness",
+      "definition": "Performance under deliberately selected input perturbations or attacks.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Uncertainty estimation",
+      "definition": "Estimating uncertainty about outputs or model predictions.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Selective prediction",
+      "definition": "Allowing a model to defer when its decision rule identifies insufficient support.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Agent and tool security",
+      "definition": "How can external inputs, tools, memory, or permissions compromise agent behavior?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Prompt injection",
+      "definition": "An attempt to make an agent treat untrusted content as instructions.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Tool permissions",
+      "definition": "Rules determining which external actions an agent may execute.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Memory integrity",
+      "definition": "Protection against unauthorized or misleading changes to persistent agent records.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Data exfiltration",
+      "definition": "Unauthorized transfer of protected information outside its permitted boundary.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Multi-agent safety",
+      "definition": "How do interacting agents create dependence, conflict, coordination, and oversight failures?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Dependent evidence",
+      "definition": "Evidence items that do not satisfy evidence independence.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Conformity and social learning",
+      "definition": "Changes in agent outputs after exposure to other agents outputs or actions.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Collusion and coordination risks",
+      "definition": "Risks that require distinguishing coordination from parallel conduct and correlated error.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Multi-agent oversight",
+      "definition": "Protocols that assess or constrain several interacting agents.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Dangerous capabilities and misuse",
+      "definition": "Which capabilities enable harm, and how can access controls and safeguards reduce it?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Cyber misuse",
+      "definition": "Use of AI systems to support harmful cyber operations.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Biological and chemical misuse",
+      "definition": "Use of AI systems to support harmful biological or chemical activity.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Persuasion misuse",
+      "definition": "Use of AI systems to influence people in ways that violate stated safety criteria.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Capability safeguards",
+      "definition": "Controls intended to limit harmful use of model capabilities.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Privacy and information protection",
+      "definition": "How can training and deployment expose sensitive information?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Memorization",
+      "definition": "Retention of particular training examples in model behavior.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Membership inference",
+      "definition": "Inferring whether a record was part of model training data.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Differential privacy",
+      "definition": "A formal bound on how individual records affect an algorithms output distribution.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Privacy-preserving deployment",
+      "definition": "Deployment methods that constrain access to sensitive inputs, outputs, and records.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Fairness and representational harms",
+      "definition": "Who receives benefits or harms, and how are disparities measured and addressed?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Fairness measurement",
+      "definition": "Evaluation of specified differences in model outcomes across groups.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Representational harms",
+      "definition": "Harms from how a model describes or portrays people and groups.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Allocation harms",
+      "definition": "Harms from decisions that distribute opportunities or resources.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Accessibility",
+      "definition": "Whether people with different access needs can use and contest AI systems.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Human factors and human oversight",
+      "definition": "How do people understand, rely on, supervise, and contest AI systems?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Appropriate reliance",
+      "definition": "Human reliance calibrated to the conditions under which a system is useful.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Automation bias",
+      "definition": "Human decision errors associated with excessive reliance on automated outputs.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Human-AI interaction",
+      "definition": "The design and study of interaction between people and AI systems.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Contestability",
+      "definition": "The ability to challenge a system decision and obtain a meaningful response.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Deployment monitoring and incidents",
+      "definition": "How can operators identify and respond to failures after deployment?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Deployment monitoring",
+      "definition": "Observation of model behavior and consequences during real use.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Incident analysis",
+      "definition": "Reconstruction of failure events, causes, responses, and unresolved evidence.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Rollback and containment",
+      "definition": "Actions that limit a failure and restore a permitted operating state.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Post-deployment change",
+      "definition": "Changes in models, users, tools, or conditions after initial evaluation.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Formal methods and verification",
+      "definition": "Which safety properties can be specified and checked under explicit assumptions?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Formal specifications",
+      "definition": "Mathematical descriptions of properties a system must satisfy.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Neural network verification",
+      "definition": "Checking specified properties of a neural network under bounded conditions.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Runtime assurance",
+      "definition": "Execution-time mechanisms that enforce specified constraints.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Compositional assurance",
+      "definition": "Reasoning about a system using properties and assumptions of its components.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Training data and model supply chains",
+      "definition": "How do data, model artifacts, and dependencies introduce safety failures?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Data poisoning",
+      "definition": "Deliberate modification of training or retrieval data to alter system behavior.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Model backdoors",
+      "definition": "Behavior that activates under a trigger while remaining less visible under ordinary evaluation.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Data provenance",
+      "definition": "Records of how data was obtained, transformed, and included in a system.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Model supply chain",
+      "definition": "The sequence of model, data, software, and infrastructure dependencies used to build a system.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Governance and institutional assurance",
+      "definition": "Which institutions, incentives, and accountability mechanisms support safe development and deployment?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Audits and standards",
+      "definition": "External review processes and stated requirements used to assess AI systems.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Compute governance",
+      "definition": "Policies and institutions governing access to computational resources.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "International coordination",
+      "definition": "Arrangements among jurisdictions to manage shared AI risks.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Accountability",
+      "definition": "Allocation of responsibility, reporting duties, and remedies for AI decisions and harms.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Societal and systemic risks",
+      "definition": "How can widespread AI deployment change institutions, incentives, and concentrations of power?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Power concentration",
+      "definition": "Concentration of decision authority or resources among a small number of actors.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Information ecosystems",
+      "definition": "Systems through which people and institutions produce and evaluate information.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Economic transitions",
+      "definition": "Changes in work, markets, and resource distribution associated with AI deployment.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Systemic interdependence",
+      "definition": "Dependence among institutions or services that can propagate failures.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "AI welfare and moral uncertainty",
+      "definition": "What ethical obligations could arise toward AI systems, and what evidence bears on them?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Machine consciousness",
+      "definition": "The question of whether an artificial system can have subjective experience.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Moral patienthood",
+      "definition": "The status of an entity whose interests matter morally for its own sake.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Welfare evaluation",
+      "definition": "Methods proposed to assess possible welfare-relevant properties of AI systems.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Moral uncertainty",
+      "definition": "Uncertainty about which moral principles or status claims should guide action.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Embodied and physical-system safety",
+      "definition": "How do AI actions create physical risks in robots and other controlled systems?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Safe exploration",
+      "definition": "Learning or adaptation subject to stated constraints on harmful actions.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Robot safety",
+      "definition": "Safety properties and interventions for systems that act through robots.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Human-robot interaction",
+      "definition": "Interaction between people and robots with consequences for safety and control.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Simulation transfer",
+      "definition": "Transfer of behavior from simulated conditions to physical deployment.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Foundations and threat-model reasoning",
+      "definition": "Which assumptions make a safety argument valid, and how might those assumptions fail?",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Threat modeling",
+      "definition": "Specifying untrusted actors, objectives, capabilities, and protected outcomes.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Agent foundations",
+      "definition": "Formal study of agency, objectives, decision making, and embedded reasoning.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Causal identification",
+      "definition": "Conditions under which observations and interventions determine a causal quantity.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Landscape topic definitions",
+      "term": "Risk assessment",
+      "definition": "Structured assessment of possible harms, their likelihoods, and uncertainty.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "epistemology",
+      "definition": "Study of knowledge, evidence, justification, and rational belief. Here it asks what warrants reliance on an agent's claim.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "testimony",
+      "definition": "Information received through another agent's communicated claim. Trust in the agent does not establish evidence independence. Sources: [R1], [R2].",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "underdetermination",
+      "definition": "Several explanations remain compatible with the available evidence. Working use here concerns causal explanations of agent behavior.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "intervention",
+      "definition": "A deliberate change to part of a system used to study its consequences. A causal interpretation requires stated assumptions. Source: [T4].",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "focal point",
+      "definition": "A salient option agents expect others to select, which can support coordination without direct communication. Also called a Schelling point. Source: [T2].",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "public signal",
+      "definition": "Information observable by multiple agents. Shared visibility alone does not imply common knowledge or harmful coordination.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "Rashomon narrative effect",
+      "definition": "Competing accounts of the same event. This is a narrative lens, not a statistical definition.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "Rashomon set",
+      "definition": "Predictive models whose loss lies within a stated tolerance of the best loss in a specified model class. Source: [T3].",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "predictive multiplicity",
+      "definition": "Differences in predictions among similarly accurate models. It does not imply that their causal explanations are valid. Source: [T3].",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "construct validity",
+      "definition": "Whether a measurement supports the intended interpretation of a theoretical property. Source: Jacobs and Wallach [T5].",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "operationalization",
+      "definition": "A rule connecting a theoretical property to observable measurements, with assumptions about that connection. Source: [T5].",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "algorithmic monoculture",
+      "definition": "Several decision-makers rely on the same algorithm. This can affect joint outcomes beyond individual accuracy. Source: [T6].",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "common-cause failure",
+      "definition": "Multiple components fail because of one shared cause. Working reliability concept; specific industrial standards require separate verification.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "principal-agent problem",
+      "definition": "A delegating actor and an acting agent have different objectives or information. Working game-theory definition.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "mechanism design",
+      "definition": "Selection of rules, information, and incentives to pursue an intended collective outcome. Working game-theory definition.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "value of information",
+      "definition": "Expected improvement in a decision from obtaining information, assessed against the cost of obtaining it. Working decision-theory definition.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "false assurance (ours)",
+      "definition": "Reassurance about safety that exceeds what the evidence supports.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "brainstorm record (ours)",
+      "definition": "A persistent proposed research question with conceptual grounds, an experiment, limits, and linked research areas.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "diagnosis",
+      "definition": "Identification of a failure mechanism from available evidence. Several mechanisms can remain possible. Working definition for the investigation guide.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "repair",
+      "definition": "A change intended to restore a specified property. Repair success requires checking that property after the change. Working definition for the investigation guide.",
+      "banned": "No additional synonym restriction."
+    },
+    {
+      "section": "Brainstorming concepts",
+      "term": "catastrophic AI risk",
+      "definition": "In this research bank, the risk of artificial intelligence causing or enabling very large-scale harm, including widespread loss of life or loss of human control with severe consequences. No numerical threshold is implied.",
+      "banned": "No additional synonym restriction."
     }
   ]
 };

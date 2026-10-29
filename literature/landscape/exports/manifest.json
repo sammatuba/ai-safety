@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "exported_at": "2026-10-28T03:55:58+00:00",
+  "tables": {
+    "metadata": {
+      "rows": 4,
+      "sha256": "44250cc9b6938827f90453f981493dae0e37c41fb6af87355dc2498d08fa6651"
+    },
+    "entities": {
+      "rows": 101,
+      "sha256": "f574a64f83c4dd5f4fb5bb59ff2402befba6f753f89e3bb75cb224419ed1d2c0"
+    },
+    "sources": {
+      "rows": 3598,
+      "sha256": "6482ca0968bade06d3221dfadb03f10a6d7cbcec4addfa124ddccbd94e538712"
+    },
+    "queries": {
+      "rows": 441,
+      "sha256": "b9c24de52753428f7208dfb26ebca020b098513aa4fe680c60c765a618e6ec6e"
+    },
+    "snapshots": {
+      "rows": 583,
+      "sha256": "2d3acb2eeb3378b486ac7278f97722d324c15d2a0c3174a4027c403ecf9300c4"
+    },
+    "search_hits": {
+      "rows": 4405,
+      "sha256": "877cf04e7108bbbb12294d65d2b982237cfa468f076f1d6f96115e40c0ee6141"
+    },
+    "source_topics": {
+      "rows": 4328,
+      "sha256": "da8b162e3db52263f07af53d49e535b7dbd0be684d224483ed3179f8924c95e7"
+    },
+    "claims": {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "relations": {
+      "rows": 13,
+      "sha256": "9fbeee4baaf8e96413d1b43bf47cb7376147bf7bbaa98698147893537fd8acb0"
+    },
+    "calls": {
+      "rows": 1184,
+      "sha256": "d9bfea04ead9012a7bb9a9f0d0f78f1f59063adce752e058c0bcf2154383294c"
+    }
+  }
+}

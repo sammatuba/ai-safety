@@ -2,6 +2,221 @@
 
 Append-only log. Newest entry first. Each entry: date, what changed, what is blocked, next step.
 
+## 2026-10-29: full-method prior-work pass and refined three-idea drafts
+
+**Owner:** check prior research, then complete refinement and return three ideas.
+**Done:** three Luna subagents inspected closest full-text methods, results, and limitations.
+Updated T14, T17, T20, T21, and T22 dossiers beyond abstract-only records.
+Registered T23 to T28, including interruption, asynchronous replanning, measurement allocation,
+system-safety theory, and an energy-sector governance prototype.
+The proposed distinctions now concern cancellation across delegated objectives, identical evidence under different outcome labels,
+and responsibility assignments for a fixed hazard whose dependencies cross agent tasks.
+Broad claims about novel interruption, evidence seeking, or responsibility diffusion are unsupported.
+**Limits:** targeted review, not an exhaustive systematic review. No code or data was reproduced and no paid experiment ran.
+The publisher page for T27 returned HTTP 403; the MIT author manuscript was accessible.
+The exact manuscript-to-journal correspondence remains unchecked.
+**Next:** obtain expert feedback on these narrow comparisons, then build matched pilot cases before selecting a project.
+
+## 2026-10-29: exploratory form drafts and critical-infrastructure connections
+
+**Owner:** draft form answers for all three refined ideas while continuing ideation.
+**Done:** prepared chat drafts for intervention through replanning, evaluation categories and test selection,
+and responsibility allocation for interacting tasks. Added tentative feasibility and exact form area labels.
+Connected each to a possible synthetic power-system setting without claiming operational validity.
+Verified the linked Center for AI Safety risk overview and a Department of Energy risk announcement; registered W8 and W9.
+The existing submission files remain unchanged because project selection remains open.
+**Unresolved:** novelty, model budget, and the validity of power-sector cases require further work.
+**Next:** choose whether energy is a motivating example or an experimentally validated domain, then construct a matched case.
+
+## 2026-10-29: model-focused epistemology and management research refinement
+
+**Owner:** refine the remaining ideas around catastrophic artificial intelligence risk and experiments on model behavior.
+Avoid production-harness integration. Challenge publication potential and search for close prior work.
+**Done:** explored evaluation categories that affect subsequent evidence selection, and responsibility allocation for failures between tasks.
+The existing organizational-control idea can instead test model replanning after human cancellation.
+Two Luna subagents checked prior work and added verified metadata records T17 to T22.
+Direct predecessors cover distributed information, commitment escalation, outcome pressure, missing evidence, specification-based testing, and delegated misalignment.
+The latter explicitly discusses responsibility diffusion. Broad claims of novelty would therefore be premature.
+These remain chat proposals; no project selection, submission replacement, or registered hypothesis changed.
+**Verification:** rebuilt 40 paper cards. Repository checks pass. No model experiment ran.
+**Unresolved:** comparisons are based on abstract pages, not full experimental reconstruction.
+Catastrophic-risk pathways are conditional arguments, not measured catastrophic outcomes.
+**Next:** inspect the closest methods and construct matched examples before selecting a model experiment.
+
+## 2026-10-29: organizational multi-agent safety brainstorming
+
+**Owner:** explore three directions beyond the current evaluation-review proposals, using Mabuhay as inspiration.
+**Done:** inspected `/home/sammatuba/projects/mabuhay/mabuhay-os` without modifying it.
+Its architecture distinguishes shared rules, persistent state, runtime bindings, and enforcement differences.
+Two Luna subagents gathered context, checked overlap, and registered verified bibliography metadata.
+The chat explores constraint preservation across delegation, unsafe procedure transmission through memory,
+and human cancellation across retries and successor agents. These are exploratory questions, not project selections.
+Mabuhay supplies preexisting design inspiration, not evidence of safety failures or a new research contribution.
+Added metadata stubs T13 to T16 and rebuilt 34 paper cards. Comparison uses abstracts only.
+The current submission drafts remain in place. No paid research experiment or sibling-repository edit occurred.
+**Unresolved:** novelty requires full-paper comparison. Cancellation semantics in Mabuhay were not established by the scanned documents.
+**Next:** select one question and construct a small executable example with an ordinary software-control baseline.
+
+## 2026-10-28: three form drafts and interactive research study pages
+
+**Owner:** provide details for all three ideas; the owner will submit the form manually.
+Also provide interactive pages for sustained reading and exploration.
+**Done:** added eight reading chapters in `explainer/research.html`, generated from canonical guides.
+The companion includes expense, investigation, coordination, and risk-pathway exercises;
+self-checks; glossary definitions; search; local notes; reading progress; and form-field copy buttons.
+Added `form-answers.json` and regenerated `TOPIC-SUBMISSION.md` with all three drafts.
+Updated the TARA brief and preserved the old probe documents as dated historical drafts.
+D-011 records the submission direction and learning interface. The owner supplies personal
+details and collaborator preferences in the actual form. No online submission occurred.
+
+**Verification:** all 53 lab tests pass. Browser checks cover every chapter, four investigation
+cases, correct and incorrect repairs, the evidence budget, all three rendered plans, notes,
+search, glossary, dark and light themes at mobile widths, and the existing explainer link.
+Repository checks and routing checks pass. The form draft has no sentences over 25 words
+or paragraphs over six sentences under the rough sentence check. A portable study pack
+is saved at `sources/research-study.zip` for extraction and local browser use.
+**Failure recorded:** an initial patch attempted to replace one file through duplicate
+operations; the patch was rejected before applying. The corrected file replacement succeeded.
+**Next:** the owner chooses feasibility and collaborator answers, submits the form once,
+and uses the interactive exercises while reviewing teacher feedback. No paid model run occurred.
+
+## 2026-10-28: investigation study guide and catastrophic-risk pathway
+
+**Owner:** explain the approach deeply, using adapted Simplified Technical English,
+familiar examples, and an explicit connection to catastrophic artificial intelligence risk.
+**Done:** added a six-step study guide and an answered self-check. The guide walks through
+an expense report, a model evaluation, and a constructed power-market approval.
+It separates diagnosis, evaluation repair, model repair, and immediate permission.
+It traces a conditional risk pathway and identifies the links a small experiment could test.
+Added glossary definitions and linked the guide through the brainstorming bank and routing.
+
+**Verification:** guide and quiz have no sentences over 25 words under the repository's
+rough sentence check. This is not certification of full ASD-STE100 compliance.
+Repository checks pass with no synonym warnings, broken links, or frontmatter failures.
+All fourteen routing bundles resolve. No lab implementation changed or model experiment ran.
+**Unresolved:** the catastrophic-risk pathway is a threat model, not a measured probability.
+**Next:** work through the self-check, then construct the first diagnostic case with protected records and an executable repair.
+
+## 2026-10-28: brainstorming prior-work review and three candidate projects
+
+**Done:** added a prior-work review and three candidate briefs to the brainstorming bank.
+Added map records B15 to B17, bringing the bank to seventeen proposals with 103 speculative links.
+The candidates compare evidence checks, artifact transformations against coordination cues,
+and diagnostic investigation scored by attribution, repair, and immediate action.
+Direct prior work materially narrows the broad ideas: T9 already studies focal-point
+monitoring subversion; S14 includes omission attacks; T10 evaluates investigator tools;
+T11 evaluates active causal experiments. Added metadata stubs T9 to T12 and S14.
+Verified S14's previously unknown title and used the latest inspected versions for comparison.
+Updated existing idea records, the concept guide, map exports, bibliography cards, and routing.
+
+**Verification:** repository checks pass without synonym warnings, broken links, or frontmatter failures.
+All fourteen routing bundles resolve. Canonical and mapped proposal counts agree.
+The map generator validated idea links. No lab implementation changed; no model experiment was run.
+**Unresolved:** novelty, model access, compute, and paid budgets remain open.
+Candidate priorities are interpretations, not measured feasibility or project commitments.
+**Next:** create one independently checkable worked artifact per candidate before choosing a project.
+
+## 2026-10-28: conceptual brainstorming bank and interactive map section
+
+**Owner:** ground expansive ideation in epistemology, ontology, game theory, power markets,
+focal points, and Rashomon; preserve it in a dedicated knowledge-map section.
+**Done:** added `literature/landscape/brainstorming/` with a six-step concept guide,
+fourteen canonical idea records, and generated experiment cards. Each record includes
+the mechanism, safety relevance, industry-connection limits, measures, prior work,
+and a reason to stop or redesign. D-010 records the storage and epistemic boundary.
+Added bibliography stubs T2 to T8, glossary terms, routing, and entry-point links.
+The map now has searchable idea cards, conceptual-lens filters, and idea graph navigation.
+Graph exports include speculative idea connections. Proposals do not enter verified claims.
+Portable backups include the bank; a new backup is recorded in the backup manifest.
+
+**Verification:** all 53 lab tests pass. Repository checks report no synonym warnings,
+broken links, or frontmatter failures. All 14 routing bundles resolve. The snapshot audit
+passes for 583 snapshots. A local browser run checked all 14 cards, filters, graph navigation,
+the direct section link, mobile width, and runtime errors. Desktop and mobile screenshots
+are in the ignored `sources/` directory.
+**Failures recorded:** sandbox restrictions initially blocked uv's cache and Chromium startup.
+Approved reruns succeeded. The first browser test clicked empty space in an SVG group;
+the corrected check clicks the visible circle and passes. No paid research run was launched.
+**Next:** inspect the closest methods before choosing a project. Candidate combinations
+cover claim scope and reporting, public coordination cues, and diagnostic investigation.
+
+## 2026-10-28: deeper TARA project ideation
+
+**Done:** reconsidered the sprint's realism and the safety relevance of its problem.
+Identified safety-evaluation sabotage and correlated monitor failures as candidate directions.
+Added an Anthropic source stub [T1] on prompt-conditioned research sabotage.
+**Blocked:** feasibility depends on model access, compute, and the teacher's feedback.
+**Next:** select a concrete workflow and inspect its closest published baselines.
+
+## 2026-10-28: TARA ideas form brainstorming
+
+**Done:** developed three candidate ideas for the form using the sprint findings and TARA brief.
+The ideas cover evidence provenance, auditor reliability, and activation-based monitoring.
+**Blocked:** the form deadline, field options, compute access, and project budget are unknown.
+**Next:** choose ideas with the owner and seek teacher feedback before fixing a project plan.
+
+## 2026-10-28: session handoff and portable overnight research brief
+
+**Done:** saved `prompts/deepseek-overnight-research.md` for use in the owning repository.
+It covers prospecting, competitor intelligence, knowledge maps, native server-side search,
+cost controls, evidence provenance, checkpoints, and the morning handoff.
+The official native provider performs an auxiliary model turn for each search [W7].
+Model-token charges and subscription inclusion remain separate from the search-fee promotion.
+**Blocked:** none for the handoff. No overnight run was launched in this repository.
+**Next:** choose the appropriate repository, specify its objective and budget, verify the active
+search provider, and run the brief there.
+
+## 2026-10-28: persistent AI safety landscape; standalone billing corrected; native Flash search validated
+
+**Owner:** build a comprehensive landscape with knowledge graphs, mind maps, and a persistent database.
+**Built:** `literature/landscape/` holds the local SQLite database, portable table exports,
+full-text search, generated graph formats, and a self-contained interactive map.
+The editorial map covers 20 areas and 80 subtopics. The code lives in
+`lab/src/epistemic_lab/landscape.py`, `landscape_views.py`, and the existing network module `llm.py`.
+D-009 records the design. The project PLAN records the method and budget.
+
+**Collection:** 440 standalone searches completed across broad facets and every subtopic.
+A separate native validation returned one server-side search and ten results.
+The database preserves 4,405 search hits and 583 hashed response snapshots.
+There are 142 retrieved source pages. Search summaries remain unreviewed discovery material.
+No scientific claims were automatically verified. Existing bibliography records retain their ids.
+New discoveries require dossier stubs and bibliography entries before research citation.
+
+**Billing correction:** the first one-call and 32-call tests showed no balance change.
+A later check showed a USD 0.04 granted-balance decrease. The owner reported no other usage
+and authorized USD 1.00 total. Collection continued within that budget.
+The owner then clarified the distinction between standalone billed endpoints and the server-side waiver.
+The initial inference from endpoint parity to promotional eligibility was wrong.
+Standalone collection is now disabled, and the running fetch collector was interrupted.
+Final observed granted-balance decrease: USD 0.44; topped-up balance change: USD 0.00.
+One dispatched fetch has unknown server completion and billing after client interruption.
+
+**Native route:** one `deepseek-flash` Messages request used `web_search_20250305`.
+It returned one server-tool call, one search-result block, and ten results.
+Official documentation maps the model alias to Flash 4.1–1017; the response reports the alias only.
+The dated tool schema remains accepted. The native response reported 9,979 input tokens,
+256 cache-read tokens, and 566 output tokens; the requested output limit was 512.
+The archive preserves those numbers as returned, without assuming why they differ.
+The immediate native balance comparison showed USD 0.00 change.
+No itemized search-fee field or proof of subscription inclusion was returned.
+The project reserves USD 0.01 within the existing budget for this single validation call.
+
+**Verification and failures:** all 51 lab tests pass. The snapshot audit passes.
+The complete export restored into a clean database with 3,586 sources and 583 intact snapshots.
+A portable backup contains the exports, maps, route-validation record, and retrieval snapshots.
+Its path and full hash are recorded in `literature/landscape/backup-manifest.json`.
+The initial export-restore test exposed parent-order restoration failures; explicit transaction deferral fixed them.
+Eight Fetch requests returned HTTP 404. The collector first stopped on one unavailable page;
+it now records unavailable pages and continues while stopping on authentication or balance failures.
+A resource heuristic initially treated author directories as papers; URL-shape checks corrected it.
+A Document Object Model initialization check passed for graph navigation and source filtering.
+No browser renderer is installed. The Harness help command attempted a write outside the repository
+and the sandbox blocked it; the native test used the documented request format without altering global profiles.
+
+**Next:** review preserved primary material, verify source metadata, and extract candidate claims with exact passages.
+Native batch collection and bulk model extraction are not enabled. The subscription's inference coverage
+still needs account-specific verification before calling the overall workflow free.
+
 ## 2026-10-26: paper cut to the 8-page cap; conclusion rewritten for AI safety
 
 **Owner:** 8-page hard cap up to the conclusion; shorten; concise introduction and discussion;

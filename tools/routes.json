@@ -34,6 +34,8 @@
   "plan": ["AGENTS.md", "ROADMAP.md", "DECISIONS.md", "STATUS.md"],
   "study": ["study/STUDY-PLAN.md", "GLOSSARY.md", "foundations/00-map.md"],
   "explainer": ["explainer/README.md", "GLOSSARY.md", "foundations/00-map.md"],
+  "landscape": ["literature/landscape/README.md", "projects/2026-10-ai-safety-landscape/PLAN.md", "literature/landscape/topics.json", "literature/landscape/coverage.md"],
+  "brainstorm": ["literature/landscape/brainstorming/README.md", "literature/landscape/brainstorming/investigation-study-guide.md", "literature/landscape/brainstorming/prior-work-review.md", "literature/landscape/brainstorming/candidate-briefs.md", "literature/landscape/brainstorming/ideas.json", "GLOSSARY.md", "literature/INDEX.md"],
   "foundations-all": [
     "GLOSSARY.md",
     "foundations/00-map.md",

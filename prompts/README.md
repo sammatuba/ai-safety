@@ -29,3 +29,7 @@ modes) are compatible; `prompts/modes.md` restates the modes so any tool can use
 
 Anything the tool produces that should persist goes into the owning file in this
 repository, by you. The repository is the shared state; the tools are interchangeable.
+
+For a portable prospecting, competitor-intelligence, or knowledge-map assignment,
+see [the overnight DeepSeek research brief](deepseek-overnight-research.md).
+Copy it to the repository that owns the work and fill in the parameters before starting.

@@ -18,6 +18,9 @@ it. Every citation points to a verified source.
 |---|---|
 | See what is happening now | `STATUS.md` |
 | See the whole plan with dates | `ROADMAP.md` |
+| Explore the broader AI safety landscape | [Research maps and source database](literature/landscape/README.md) |
+| Brainstorm specific research projects | [Concept guide and idea bank](literature/landscape/brainstorming/README.md), or the map's Brainstorming tab |
+| Read and experiment with the project ideas | [Interactive study companion](explainer/research.html): eight chapters, exercises, and form answers |
 | Learn the concepts in order | `foundations/00-map.md` |
 | Explore the concepts interactively | [explainer/index.html](explainer/index.html), no install (see [explainer/README.md](explainer/README.md)) |
 | Look up a term | `GLOSSARY.md` |

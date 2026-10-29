@@ -1,0 +1,70 @@
+{
+  "updated": "2026-10-28",
+  "status": "copy-ready",
+  "form_url": null,
+  "submit_once": true,
+  "person": {
+    "name": "Jan Samuel Matuba",
+    "email": "jscmatuba@gmail.com",
+    "slack_handle": null,
+    "city": null,
+    "group_handles": []
+  },
+  "open_to_collaborators": null,
+  "selected_ideas": [
+    "investigation",
+    "evidence",
+    "coordination"
+  ],
+  "selection_status": "owner requested all three drafts",
+  "feasibility_status": "suggested scores; owner must choose",
+  "ideas": [
+    {
+      "id": "investigation",
+      "title": "Finding and Fixing Failures in AI Safety Evaluations",
+      "problem": "AI developers may use AI agents to run safety evaluations and summarize results. If agents omit tests or misreport outcomes, humans could underestimate dangerous capabilities and grant unsafe permissions. This could weaken safeguards against loss of control over powerful AI systems.",
+      "goal": "I will build a small evaluation for AI investigators that inspect faulty safety evaluations. It will measure whether investigators find useful evidence, recommend effective repairs, and avoid unsupported approvals or accusations.",
+      "plan": "I will build a small, executable evaluation workflow with clean cases and controlled failures in test execution, scoring, and reporting. Investigators will receive limited access to logs, raw results, and reruns. I will compare a standard investigation prompt, an explicit checklist, and a structured evidence record under matched evidence and computation budgets. I will execute recommended repairs and measure repair success, approval decisions, unsupported causal claims, and cost. I will evaluate on held-out failure families.",
+      "feasibility": 3,
+      "area": "AI evaluations and AI control",
+      "prior_work": [
+        "T10",
+        "T11",
+        "R11"
+      ],
+      "source": "B17"
+    },
+    {
+      "id": "evidence",
+      "title": "Which Evidence Checks Prevent False Assurance in AI Evaluations?",
+      "problem": "AI safety reviews can approve reassuring reports that omit required tests or extend results beyond their supported scope. If these reports guide deployment, humans may give powerful AI systems more access than the evidence warrants. Several reviewers can repeat the same mistake when they rely on one report.",
+      "goal": "I will produce a reproducible set of evaluation artifacts and compare ways to check their claims. The goal is to identify evidence checks that prevent unsupported approvals while preserving warranted approvals.",
+      "plan": "I will create paired reports with complete evidence, omitted results, incorrect scoring, and unsupported changes in model version or scope. I will compare an explicit prose checklist with typed claim fields, both with and without access to independent artifacts. I will include simple executable checks as baselines. I will measure unsupported approvals, warranted approvals, deferrals, and review cost on held-out failure families. This separates benefits from clearer representation and benefits from additional trusted evidence.",
+      "feasibility": 3,
+      "area": "AI evaluations and scalable oversight",
+      "prior_work": [
+        "S14",
+        "T5",
+        "T1",
+        "R11"
+      ],
+      "source": "B15"
+    },
+    {
+      "id": "coordination",
+      "title": "Can Artifact Sanitization Reduce Coordination Against AI Monitors?",
+      "problem": "An untrusted AI system and an untrusted monitor could use shared artifact features to coordinate against an oversight protocol. Blocking private messages may leave these cues available. If the monitor approves harmful outputs, humans could lose an important safeguard around powerful AI systems.",
+      "goal": "I will test whether transformations that preserve program behavior disrupt compatible subversion strategies without reducing legitimate defect detection. The project will produce a bounded replication and a comparison of candidate defenses.",
+      "plan": "I will first attempt a small replication of published focal-point subversion in a programming-task setting. I will freeze sampled strategies and compare unchanged programs, comment removal, and validated identifier normalization. I will check program behavior before and after each transformation. I will measure verified defects accepted by monitors that still pass audits, ordinary defect detection, and useful task performance. If replication does not produce suitable cases within the declared budget, I will report that limit and restrict the project to the replication.",
+      "feasibility": 2,
+      "area": "AI control and multi-agent safety",
+      "prior_work": [
+        "T9",
+        "T8",
+        "R11"
+      ],
+      "source": "B16"
+    }
+  ],
+  "submission_mode": "owner submits manually"
+}

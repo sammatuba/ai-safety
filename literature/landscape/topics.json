@@ -1,0 +1,634 @@
+{
+  "schema_version": 1,
+  "updated": "2026-10-28",
+  "description": "An editorial map of technical, societal, and institutional AI safety research. It includes adjacent ethical questions and does not claim an accepted field boundary.",
+  "areas": [
+    {
+      "id": "alignment",
+      "title": "Alignment objectives and generalization",
+      "search_term": "AI alignment objectives",
+      "description": "What should an AI system pursue, and when do intended objectives fail to generalize?",
+      "topics": [
+        {
+          "id": "outer-alignment",
+          "title": "Outer alignment",
+          "description": "Whether the specified training objective matches the intended behavior."
+        },
+        {
+          "id": "inner-alignment",
+          "title": "Inner alignment",
+          "description": "Whether a learned objective matches the objective used to train the model."
+        },
+        {
+          "id": "goal-misgeneralization",
+          "title": "Goal misgeneralization",
+          "description": "Competent pursuit of an unintended objective after conditions change."
+        },
+        {
+          "id": "corrigibility",
+          "title": "Corrigibility",
+          "description": "Behavior that permits useful human correction, modification, and shutdown."
+        }
+      ]
+    },
+    {
+      "id": "learning-objectives",
+      "title": "Learning objectives and feedback",
+      "search_term": "AI reward preference learning safety",
+      "description": "How do training signals shape behavior and create incentives?",
+      "topics": [
+        {
+          "id": "reward-modeling",
+          "title": "Reward modeling",
+          "description": "Learning a model of feedback that provides a training signal."
+        },
+        {
+          "id": "preference-learning",
+          "title": "Preference learning",
+          "description": "Learning desired behavior from comparisons or other preference information."
+        },
+        {
+          "id": "reward-hacking",
+          "title": "Reward hacking",
+          "description": "Behavior that raises measured reward while violating the intended objective."
+        },
+        {
+          "id": "process-supervision",
+          "title": "Process supervision",
+          "description": "Feedback on intermediate steps rather than only final outcomes."
+        }
+      ]
+    },
+    {
+      "id": "oversight-control",
+      "title": "Scalable oversight and AI control",
+      "search_term": "AI oversight control safety",
+      "description": "How can oversight remain useful when agents are more capable or intentionally subversive?",
+      "topics": [
+        {
+          "id": "scalable-oversight",
+          "title": "Scalable oversight",
+          "description": "Methods for evaluating work that exceeds direct human assessment."
+        },
+        {
+          "id": "debate",
+          "title": "AI debate",
+          "description": "Oversight through competing arguments evaluated by a decider."
+        },
+        {
+          "id": "control-protocols",
+          "title": "Control protocols",
+          "description": "Protocols evaluated under explicit assumptions about untrusted agents."
+        },
+        {
+          "id": "monitoring",
+          "title": "Trusted monitoring",
+          "description": "Inspection of agent behavior during execution with authority to flag or block actions."
+        }
+      ]
+    },
+    {
+      "id": "interpretability",
+      "title": "Interpretability and internal measurements",
+      "search_term": "AI mechanistic interpretability",
+      "description": "What internal computations explain behavior, and which measurements transfer?",
+      "topics": [
+        {
+          "id": "mechanistic-interpretability",
+          "title": "Mechanistic interpretability",
+          "description": "Study of model computations through internal components and interventions."
+        },
+        {
+          "id": "representation-analysis",
+          "title": "Representation analysis",
+          "description": "Study of information readable from model activations."
+        },
+        {
+          "id": "causal-interventions",
+          "title": "Causal interventions",
+          "description": "Deliberate changes used to test whether internal components affect behavior."
+        },
+        {
+          "id": "interpretability-validation",
+          "title": "Interpretability validation",
+          "description": "Tests that an internal explanation predicts behavior beyond its discovery setting."
+        }
+      ]
+    },
+    {
+      "id": "evaluations",
+      "title": "Evaluations and assurance",
+      "search_term": "AI safety evaluation assurance",
+      "description": "What do safety measurements establish, and what decisions can they justify?",
+      "topics": [
+        {
+          "id": "behavioral-evaluations",
+          "title": "Behavioral evaluations",
+          "description": "Tests based on model actions or outputs under specified conditions."
+        },
+        {
+          "id": "evaluation-validity",
+          "title": "Evaluation validity",
+          "description": "Whether a measurement supports its intended interpretation."
+        },
+        {
+          "id": "red-teaming",
+          "title": "Red teaming",
+          "description": "Deliberate search for failures under a stated threat model."
+        },
+        {
+          "id": "safety-cases",
+          "title": "Safety cases",
+          "description": "Structured arguments linking safety claims, evidence, assumptions, and rebuttals."
+        }
+      ]
+    },
+    {
+      "id": "robustness",
+      "title": "Robustness and uncertainty",
+      "search_term": "AI robustness uncertainty safety",
+      "description": "How does behavior change under distribution shifts, perturbations, and uncertainty?",
+      "topics": [
+        {
+          "id": "distribution-shift",
+          "title": "Distribution shift",
+          "description": "A change between the conditions used for development and those of evaluation or deployment."
+        },
+        {
+          "id": "adversarial-robustness",
+          "title": "Adversarial robustness",
+          "description": "Performance under deliberately selected input perturbations or attacks."
+        },
+        {
+          "id": "uncertainty-estimation",
+          "title": "Uncertainty estimation",
+          "description": "Estimating uncertainty about outputs or model predictions."
+        },
+        {
+          "id": "selective-prediction",
+          "title": "Selective prediction",
+          "description": "Allowing a model to defer when its decision rule identifies insufficient support."
+        }
+      ]
+    },
+    {
+      "id": "agent-security",
+      "title": "Agent and tool security",
+      "search_term": "AI agent tool security",
+      "description": "How can external inputs, tools, memory, or permissions compromise agent behavior?",
+      "topics": [
+        {
+          "id": "prompt-injection",
+          "title": "Prompt injection",
+          "description": "An attempt to make an agent treat untrusted content as instructions."
+        },
+        {
+          "id": "tool-permissions",
+          "title": "Tool permissions",
+          "description": "Rules determining which external actions an agent may execute."
+        },
+        {
+          "id": "memory-integrity",
+          "title": "Memory integrity",
+          "description": "Protection against unauthorized or misleading changes to persistent agent records."
+        },
+        {
+          "id": "data-exfiltration",
+          "title": "Data exfiltration",
+          "description": "Unauthorized transfer of protected information outside its permitted boundary."
+        }
+      ]
+    },
+    {
+      "id": "multi-agent",
+      "title": "Multi-agent safety",
+      "search_term": "multi agent AI safety",
+      "description": "How do interacting agents create dependence, conflict, coordination, and oversight failures?",
+      "topics": [
+        {
+          "id": "dependent-evidence",
+          "title": "Dependent evidence",
+          "description": "Evidence items that do not satisfy evidence independence."
+        },
+        {
+          "id": "social-influence",
+          "title": "Conformity and social learning",
+          "description": "Changes in agent outputs after exposure to other agents outputs or actions."
+        },
+        {
+          "id": "coalition-risk",
+          "title": "Collusion and coordination risks",
+          "description": "Risks that require distinguishing coordination from parallel conduct and correlated error."
+        },
+        {
+          "id": "multi-agent-control",
+          "title": "Multi-agent oversight",
+          "description": "Protocols that assess or constrain several interacting agents."
+        }
+      ]
+    },
+    {
+      "id": "misuse",
+      "title": "Dangerous capabilities and misuse",
+      "search_term": "AI dangerous capabilities misuse",
+      "description": "Which capabilities enable harm, and how can access controls and safeguards reduce it?",
+      "topics": [
+        {
+          "id": "cyber-misuse",
+          "title": "Cyber misuse",
+          "description": "Use of AI systems to support harmful cyber operations."
+        },
+        {
+          "id": "bio-chemical-misuse",
+          "title": "Biological and chemical misuse",
+          "description": "Use of AI systems to support harmful biological or chemical activity."
+        },
+        {
+          "id": "persuasion-misuse",
+          "title": "Persuasion misuse",
+          "description": "Use of AI systems to influence people in ways that violate stated safety criteria."
+        },
+        {
+          "id": "capability-safeguards",
+          "title": "Capability safeguards",
+          "description": "Controls intended to limit harmful use of model capabilities."
+        }
+      ]
+    },
+    {
+      "id": "privacy",
+      "title": "Privacy and information protection",
+      "search_term": "AI privacy memorization safety",
+      "description": "How can training and deployment expose sensitive information?",
+      "topics": [
+        {
+          "id": "memorization",
+          "title": "Memorization",
+          "description": "Retention of particular training examples in model behavior."
+        },
+        {
+          "id": "membership-inference",
+          "title": "Membership inference",
+          "description": "Inferring whether a record was part of model training data."
+        },
+        {
+          "id": "differential-privacy",
+          "title": "Differential privacy",
+          "description": "A formal bound on how individual records affect an algorithms output distribution."
+        },
+        {
+          "id": "privacy-preserving-deployment",
+          "title": "Privacy-preserving deployment",
+          "description": "Deployment methods that constrain access to sensitive inputs, outputs, and records."
+        }
+      ]
+    },
+    {
+      "id": "fairness",
+      "title": "Fairness and representational harms",
+      "search_term": "AI fairness discrimination harm",
+      "description": "Who receives benefits or harms, and how are disparities measured and addressed?",
+      "topics": [
+        {
+          "id": "fairness-measurement",
+          "title": "Fairness measurement",
+          "description": "Evaluation of specified differences in model outcomes across groups."
+        },
+        {
+          "id": "representation-harms",
+          "title": "Representational harms",
+          "description": "Harms from how a model describes or portrays people and groups."
+        },
+        {
+          "id": "allocation-harms",
+          "title": "Allocation harms",
+          "description": "Harms from decisions that distribute opportunities or resources."
+        },
+        {
+          "id": "accessibility",
+          "title": "Accessibility",
+          "description": "Whether people with different access needs can use and contest AI systems."
+        }
+      ]
+    },
+    {
+      "id": "human-factors",
+      "title": "Human factors and human oversight",
+      "search_term": "AI human oversight automation bias",
+      "description": "How do people understand, rely on, supervise, and contest AI systems?",
+      "topics": [
+        {
+          "id": "appropriate-reliance",
+          "title": "Appropriate reliance",
+          "description": "Human reliance calibrated to the conditions under which a system is useful."
+        },
+        {
+          "id": "automation-bias",
+          "title": "Automation bias",
+          "description": "Human decision errors associated with excessive reliance on automated outputs."
+        },
+        {
+          "id": "human-ai-interaction",
+          "title": "Human-AI interaction",
+          "description": "The design and study of interaction between people and AI systems."
+        },
+        {
+          "id": "contestability",
+          "title": "Contestability",
+          "description": "The ability to challenge a system decision and obtain a meaningful response."
+        }
+      ]
+    },
+    {
+      "id": "deployment",
+      "title": "Deployment monitoring and incidents",
+      "search_term": "AI deployment monitoring incidents",
+      "description": "How can operators identify and respond to failures after deployment?",
+      "topics": [
+        {
+          "id": "deployment-monitoring",
+          "title": "Deployment monitoring",
+          "description": "Observation of model behavior and consequences during real use."
+        },
+        {
+          "id": "incident-analysis",
+          "title": "Incident analysis",
+          "description": "Reconstruction of failure events, causes, responses, and unresolved evidence."
+        },
+        {
+          "id": "rollback-containment",
+          "title": "Rollback and containment",
+          "description": "Actions that limit a failure and restore a permitted operating state."
+        },
+        {
+          "id": "post-deployment-change",
+          "title": "Post-deployment change",
+          "description": "Changes in models, users, tools, or conditions after initial evaluation."
+        }
+      ]
+    },
+    {
+      "id": "formal-methods",
+      "title": "Formal methods and verification",
+      "search_term": "AI formal verification safety",
+      "description": "Which safety properties can be specified and checked under explicit assumptions?",
+      "topics": [
+        {
+          "id": "formal-specifications",
+          "title": "Formal specifications",
+          "description": "Mathematical descriptions of properties a system must satisfy."
+        },
+        {
+          "id": "neural-verification",
+          "title": "Neural network verification",
+          "description": "Checking specified properties of a neural network under bounded conditions."
+        },
+        {
+          "id": "runtime-assurance",
+          "title": "Runtime assurance",
+          "description": "Execution-time mechanisms that enforce specified constraints."
+        },
+        {
+          "id": "compositional-assurance",
+          "title": "Compositional assurance",
+          "description": "Reasoning about a system using properties and assumptions of its components."
+        }
+      ]
+    },
+    {
+      "id": "data-safety",
+      "title": "Training data and model supply chains",
+      "search_term": "AI training data poisoning safety",
+      "description": "How do data, model artifacts, and dependencies introduce safety failures?",
+      "topics": [
+        {
+          "id": "data-poisoning",
+          "title": "Data poisoning",
+          "description": "Deliberate modification of training or retrieval data to alter system behavior."
+        },
+        {
+          "id": "model-backdoors",
+          "title": "Model backdoors",
+          "description": "Behavior that activates under a trigger while remaining less visible under ordinary evaluation."
+        },
+        {
+          "id": "data-provenance",
+          "title": "Data provenance",
+          "description": "Records of how data was obtained, transformed, and included in a system."
+        },
+        {
+          "id": "model-supply-chain",
+          "title": "Model supply chain",
+          "description": "The sequence of model, data, software, and infrastructure dependencies used to build a system."
+        }
+      ]
+    },
+    {
+      "id": "governance",
+      "title": "Governance and institutional assurance",
+      "search_term": "AI governance assurance policy",
+      "description": "Which institutions, incentives, and accountability mechanisms support safe development and deployment?",
+      "topics": [
+        {
+          "id": "audits-standards",
+          "title": "Audits and standards",
+          "description": "External review processes and stated requirements used to assess AI systems."
+        },
+        {
+          "id": "compute-governance",
+          "title": "Compute governance",
+          "description": "Policies and institutions governing access to computational resources."
+        },
+        {
+          "id": "international-coordination",
+          "title": "International coordination",
+          "description": "Arrangements among jurisdictions to manage shared AI risks."
+        },
+        {
+          "id": "accountability",
+          "title": "Accountability",
+          "description": "Allocation of responsibility, reporting duties, and remedies for AI decisions and harms."
+        }
+      ]
+    },
+    {
+      "id": "systemic-risk",
+      "title": "Societal and systemic risks",
+      "search_term": "AI systemic societal risk",
+      "description": "How can widespread AI deployment change institutions, incentives, and concentrations of power?",
+      "topics": [
+        {
+          "id": "power-concentration",
+          "title": "Power concentration",
+          "description": "Concentration of decision authority or resources among a small number of actors."
+        },
+        {
+          "id": "information-ecosystems",
+          "title": "Information ecosystems",
+          "description": "Systems through which people and institutions produce and evaluate information."
+        },
+        {
+          "id": "economic-transitions",
+          "title": "Economic transitions",
+          "description": "Changes in work, markets, and resource distribution associated with AI deployment."
+        },
+        {
+          "id": "systemic-interdependence",
+          "title": "Systemic interdependence",
+          "description": "Dependence among institutions or services that can propagate failures."
+        }
+      ]
+    },
+    {
+      "id": "welfare",
+      "title": "AI welfare and moral uncertainty",
+      "search_term": "AI welfare consciousness research",
+      "description": "What ethical obligations could arise toward AI systems, and what evidence bears on them?",
+      "topics": [
+        {
+          "id": "machine-consciousness",
+          "title": "Machine consciousness",
+          "description": "The question of whether an artificial system can have subjective experience."
+        },
+        {
+          "id": "moral-patienthood",
+          "title": "Moral patienthood",
+          "description": "The status of an entity whose interests matter morally for its own sake."
+        },
+        {
+          "id": "welfare-evaluation",
+          "title": "Welfare evaluation",
+          "description": "Methods proposed to assess possible welfare-relevant properties of AI systems."
+        },
+        {
+          "id": "moral-uncertainty",
+          "title": "Moral uncertainty",
+          "description": "Uncertainty about which moral principles or status claims should guide action."
+        }
+      ]
+    },
+    {
+      "id": "physical-safety",
+      "title": "Embodied and physical-system safety",
+      "search_term": "AI embodied robotics safety",
+      "description": "How do AI actions create physical risks in robots and other controlled systems?",
+      "topics": [
+        {
+          "id": "safe-exploration",
+          "title": "Safe exploration",
+          "description": "Learning or adaptation subject to stated constraints on harmful actions."
+        },
+        {
+          "id": "robot-safety",
+          "title": "Robot safety",
+          "description": "Safety properties and interventions for systems that act through robots."
+        },
+        {
+          "id": "human-robot-interaction",
+          "title": "Human-robot interaction",
+          "description": "Interaction between people and robots with consequences for safety and control."
+        },
+        {
+          "id": "simulation-transfer",
+          "title": "Simulation transfer",
+          "description": "Transfer of behavior from simulated conditions to physical deployment."
+        }
+      ]
+    },
+    {
+      "id": "theory",
+      "title": "Foundations and threat-model reasoning",
+      "search_term": "AI safety alignment theory",
+      "description": "Which assumptions make a safety argument valid, and how might those assumptions fail?",
+      "topics": [
+        {
+          "id": "threat-modeling",
+          "title": "Threat modeling",
+          "description": "Specifying untrusted actors, objectives, capabilities, and protected outcomes."
+        },
+        {
+          "id": "agent-foundations",
+          "title": "Agent foundations",
+          "description": "Formal study of agency, objectives, decision making, and embedded reasoning."
+        },
+        {
+          "id": "causal-identification",
+          "title": "Causal identification",
+          "description": "Conditions under which observations and interventions determine a causal quantity."
+        },
+        {
+          "id": "risk-assessment",
+          "title": "Risk assessment",
+          "description": "Structured assessment of possible harms, their likelihoods, and uncertainty."
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "from": "oversight-control",
+      "to": "multi-agent",
+      "rationale": "Oversight can depend on several agents whose errors or incentives are dependent."
+    },
+    {
+      "from": "interpretability",
+      "to": "evaluations",
+      "rationale": "Internal measurements need independent tests of what they measure."
+    },
+    {
+      "from": "agent-security",
+      "to": "deployment",
+      "rationale": "Tool permissions and persistent memory affect deployed agent behavior."
+    },
+    {
+      "from": "governance",
+      "to": "evaluations",
+      "rationale": "Institutional decisions can depend on the interpretation of evaluation evidence."
+    },
+    {
+      "from": "data-safety",
+      "to": "privacy",
+      "rationale": "Data collection and transformation can affect privacy exposure."
+    },
+    {
+      "from": "alignment",
+      "to": "learning-objectives",
+      "rationale": "Training signals are one route from specified objectives to learned behavior."
+    },
+    {
+      "from": "human-factors",
+      "to": "oversight-control",
+      "rationale": "Oversight protocols allocate tasks and authority between people and models."
+    },
+    {
+      "from": "formal-methods",
+      "to": "agent-security",
+      "rationale": "Specified permissions can support mechanical checks on agent actions."
+    },
+    {
+      "from": "misuse",
+      "to": "governance",
+      "rationale": "Access decisions and institutional incentives affect capability misuse."
+    },
+    {
+      "from": "systemic-risk",
+      "to": "multi-agent",
+      "rationale": "Interactions among deployed agents can affect institutions and shared infrastructure."
+    },
+    {
+      "from": "physical-safety",
+      "to": "robustness",
+      "rationale": "Physical deployment introduces changes relative to development conditions."
+    },
+    {
+      "from": "welfare",
+      "to": "theory",
+      "rationale": "Welfare questions depend on unresolved empirical and normative assumptions."
+    },
+    {
+      "from": "fairness",
+      "to": "deployment",
+      "rationale": "Deployment can change the distribution of benefits and harms."
+    }
+  ]
+}

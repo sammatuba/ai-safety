@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="An interactive reading path through evidence, diagnosis, repair, and catastrophic AI risk.">
+  <title>Evidence and Permission · Research Study</title>
+  <link rel="stylesheet" href="assets/research.css?v=20261028">
+</head>
+<body>
+<a class="skip" href="#study-main">Skip to reading</a>
+<header class="study-header">
+  <a class="brand" href="#/start"><span class="brand-symbol" aria-hidden="true">E</span><span>Evidence &amp; Permission<small>A research study companion</small></span></a>
+  <div class="header-actions"><button id="mobile-nav" aria-expanded="false" aria-controls="study-sidebar">Chapters</button><button id="open-search">Search <kbd>/</kbd></button><button id="theme" aria-label="Switch to dark theme">Dark</button></div>
+</header>
+<div class="study-shell">
+  <aside class="study-sidebar" id="study-sidebar">
+    <p class="eyebrow">Your reading path</p><nav id="chapter-nav" aria-label="Study chapters"></nav>
+    <div class="reading-progress"><label for="progress">Chapters marked read</label><progress id="progress" max="8" value="0"></progress><span id="progress-text">0 of 8</span></div>
+    <div class="sidebar-links"><a href="index.html">Original foundations and demos ↗</a><a href="../literature/landscape/explore.html#brainstorming">Knowledge map and 17 ideas ↗</a><a href="../literature/landscape/brainstorming/README.md">Canonical concept guide ↗</a></div>
+    <p class="small">Exercises use constructed examples. They are not model findings.</p>
+  </aside>
+  <main id="study-main" class="study-main" tabindex="-1"></main>
+</div>
+<dialog id="search-dialog" aria-labelledby="search-label"><div class="dialog-head"><label id="search-label" for="study-search">Search chapters, terms, and ideas</label><button data-close="search-dialog" aria-label="Close search">Close</button></div><input id="study-search" type="search" autocomplete="off" placeholder="Try: missing evidence, Rashomon, or focal point"><div id="search-results"></div></dialog>
+<dialog id="term-dialog" aria-labelledby="term-title"><div class="dialog-head"><h2 id="term-title"></h2><button data-close="term-dialog" aria-label="Close definition">Close</button></div><div id="term-definition"></div></dialog>
+<div id="announcement" role="status" aria-live="polite"></div>
+<script src="assets/glossary-data.js?v=20261028"></script>
+<script src="assets/research-data.js?v=20261028"></script>
+<script src="assets/research.js?v=20261028"></script>
+</body>
+</html>

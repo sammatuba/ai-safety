@@ -82,3 +82,63 @@ widgets. Each adds a build step or a runtime dependency for an interface whose c
 already Markdown.
 **Revisit.** If the owner needs saved quiz state, or if the hand-authored foundation pages
 drift from the canonical documents enough that a generator is cheaper than review.
+
+## D-009 (2026-10-28): a persistent, broad AI safety research database
+
+**Decision.** Build the landscape in `literature/landscape/`, with its collection project in
+`projects/2026-10-ai-safety-landscape/`. Use SQLite for the local database and portable
+JavaScript Object Notation Lines (JSONL) exports for versioned records. Generate maps from
+those records. Keep downloaded responses in `sources/ai-safety-landscape/` with hashes.
+All network requests remain in `lab/src/epistemic_lab/llm.py`.
+**Reasons.** The owner requested a comprehensive landscape and persistent database using
+DeepSeek search. Research areas overlap. A graph preserves those overlaps and provenance.
+Search summaries establish discovery, not verified research claims. Coverage needs an
+explicit query ledger and visible gaps. Collection must resume without repeating successes.
+**Scope.** Include technical safety, misuse, deployment, human factors, and governance.
+The existing collusion project is one branch. The topic map is an editorial interpretation.
+**Budget.** The project PLAN records the permitted collection route and spending limit.
+Do not infer permission for paid model inference from permission for free search.
+**Rejected.** A document-only survey; an external graph service; untraceable model summaries;
+equating an available coordination channel with observed collusion.
+**Revisit.** Add a server database only if local search and portable exports become inadequate.
+
+## D-010 (2026-10-28): a dedicated brainstorming section in the knowledge bank
+
+**Decision.** Keep brainstorm records in `literature/landscape/brainstorming/ideas.json`.
+Use a companion concept guide and generated idea cards. Show them in a dedicated map view
+and include their editorial connections in graph exports and portable backups.
+**Reasons.** The owner requested expansive ideation grounded in epistemology, ontology,
+game theory, power markets, and Rashomon. Ideas need durable records and visible links.
+**Epistemic status.** Brainstorm records are proposals, not verified research claims.
+They do not enter the claims table or define registered hypotheses. Reference ids point
+to the literature index. A project choice requires a later decision.
+**Storage.** Versioned JSON is canonical for these editorial records. Existing SQLite
+collection records remain canonical for retrieved evidence. No database migration is needed.
+**Revisit.** Add database tables if collaborative editing or idea-specific queries require them.
+
+## D-012 (2026-10-29): preserve a dated research portfolio and deep-reading handoff
+
+**Decision.** Preserve the three model-focused proposals in a dated TARA candidate document.
+Add a related-literature review, a reading path, and a complete session handoff.
+Make these discoverable from repository entry points and a dedicated routing bundle.
+**Reason.** The owner requested preservation and organization before closing the session.
+**Boundary.** This changes navigation and documentation, not project selection or the hypothesis registry.
+The 2026-10-28 form files, interactive companion, and seventeen-item map remain historical material.
+Their links must state that they do not contain the latest proposals.
+Do not replace them silently or imply that any form was submitted.
+Mabuhay remains preexisting inspiration and was inspected read-only.
+No paid model experiment, commit, push, or publication is authorized by this decision.
+**Revisit.** After expert feedback, select a project, establish a budget, and update submission artifacts explicitly.
+
+## D-011 (2026-10-28): prepare the investigation idea and an interactive study path
+
+**Decision.** Prepare the ideas form around B17, investigation of faulty safety evaluations.
+Keep B15, evidence checks, as the recommended second idea and B16 as an optional third.
+The owner requested all three drafts and will submit the form manually.
+**Reasons.** The owner asked for submission help and interactive reading pages after the guided explanation.
+The old activation-probe draft no longer reflects this discussion. Preserve it as a dated historical draft.
+**Learning interface.** Add a local reading path to `explainer/`, generated from canonical guides,
+candidate briefs, idea records, and form answers. Include deterministic teaching exercises.
+**Boundary.** The interactive exercises are constructed examples, not model findings.
+The form proposal does not authorize inference spending or freeze a project hypothesis.
+The online form permits one submission; record completion only after observing its confirmation.

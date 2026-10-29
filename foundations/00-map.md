@@ -39,6 +39,10 @@ The observation is always the same: **agreement plus a wrong decision**.
 **Agreement is an observation. Collusion is one causal explanation of it.** Every document
 in this folder returns to that sentence.
 
+The [brainstorming bank](../literature/landscape/brainstorming/README.md) expands these lenses
+into proposed experiments. It connects focal points, causal explanations, predictive Rashomon
+sets, and industry mechanisms. The proposals remain speculative until tested.
+
 ## 3. The four lenses
 
 ```

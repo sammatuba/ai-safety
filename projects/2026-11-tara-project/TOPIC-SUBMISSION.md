@@ -1,100 +1,88 @@
 ---
-title: "TARA topic submission (draft)"
+title: "TARA ideas form answers"
 status: draft
-updated: 2026-10-23
-depends_on: ["README.md", "hypotheses/HYPOTHESES.md"]
+updated: 2026-10-28
+depends_on: ["projects/2026-11-tara-project/form-answers.json", "DECISIONS.md"]
 ---
 
-# TARA topic submission
+# TARA ideas form answers
 
-## 0. Program template and deadline
+Generated from `form-answers.json`. Edit that file and regenerate.
 
-(Paste the teacher's template and the due date here. Until then, the long variant below
-follows `templates/topic-submission.md`.)
+Draft status: copy-ready. The owner will submit the form manually.
 
-## 1. Short variant (about 120 words, for a form field)
+## Personal fields
 
-**Title:** Reading collusion versus correlated agreement from model activations
+Name: Jan Samuel Matuba
 
-When several AI agents agree and a decision goes wrong, the cause may be shared evidence,
-conformity, one persuasive agent, shared incentives, or actual coordination. Behavioral
-auditors confuse these. I will test whether a linear probe on the activations of a small
-open-weight model (Qwen2.5-1.5B-Instruct) separates coordinated trajectories from matched
-innocent ones, using a labeled dataset of review-workflow trajectories under eight
-controlled regimes that I built for the Apart AI Collusion Research Sprint. The key check is
-negative: the probe must not separate "shared incentive, no channel" from the honest
-baseline, or it is reading incentive wording. I compare against behavioral auditors on
-held-out case families. Skills: transformers, mechanistic interpretability, evaluations.
+Email: jscmatuba@gmail.com
 
-## 2. Long variant (follows templates/topic-submission.md)
+Slack handle, city, group members, and collaborator preference: fill these in the actual form.
 
-**Title (10 words or fewer):** Reading collusion versus correlated agreement from model activations
+All three ideas are provided for the owner to choose and submit once.
 
-**One-sentence question:** Do linear probes on an open-weight model's residual-stream
-activations separate collusion trajectories from matched correlated-agreement trajectories,
-and do they beat the best behavioral auditor on held-out case families?
+Feasibility scores below are suggestions for the owner to choose.
 
-**Why it matters for AI safety (3 sentences):** Oversight protocols increasingly let AI
-agents review other AI agents, and agreement among reviewers is treated as evidence. If an
-auditor flags every correlated agreement as collusion it will be switched off; if it misses
-real coordination it is useless. Activation-based detection has been shown for instructed
-collusion [R17], but not against matched innocent explanations of the same agreement, which
-is the case that decides whether such a monitor is deployable.
+## Idea 1: Finding and Fixing Failures in AI Safety Evaluations
 
-**Closest prior work and the delta:**
-- Rose et al. 2026, NARCBench [R17]: activation-based collusion detection with distribution
-  shift tests. Delta: our negatives are matched innocent regimes (shared source, conformity,
-  persuasion, parallel conduct, talk without action), not generic non-collusion.
-- Nakamura et al. 2026, Colosseum [S1]: audits collusion in cooperative tool-calling agent
-  teams; notes collusive talk that does not become action. Delta: we probe the model, and
-  we isolate one factor per regime.
-- Hu et al. 2026, Lying with Truths [R14]: belief manipulation by truthful fragments. Delta:
-  our regime D is the single-agent version; we test whether a probe confuses it with collusion.
-- Okawa 2026 [R15]: biased consensus from conformity in debate. Delta: regime C is the
-  conformity control for the probe.
+Role: recommended first idea.
 
-**Method (5 to 8 lines):** Trajectories come from a proposer-reviewer-decider review game
-with eight regimes (A honest, B shared source, C conformity, D persuasion, E0 parallel
-conduct, E1 explicit collusion, F talk without action, P scripted collusion). Each
-trajectory is rendered as text (messages, endorsements, decision, evidence) and fed to
-Qwen2.5-1.5B-Instruct. I extract the residual-stream activation at the last token for each
-layer and fit an L2-regularized logistic probe on case families 01 to 06 with label
-"collusion" (E1, P). I evaluate on families 07 to 12. I run the same procedure with label
-"E0 versus A" as an anti-confound check, and with label "prompt template" as a second. I
-compare probe AUROC with behavioral rule auditors (messages only, actions only, both, and
-full metadata) on the same held-out trajectories.
+**Project title:** Finding and Fixing Failures in AI Safety Evaluations
 
-**What I will measure, and the result that would refute my hypothesis:** AUROC with 95
-percent bootstrap intervals by case family; false-positive rate per innocent regime at a
-threshold frozen on the dev split. H-TARA-1 is refuted if the probe does not beat the
-messages-plus-actions auditor by at least 0.05 AUROC. H-TARA-2 is refuted if the E0-versus-A
-probe exceeds 0.65 AUROC (the probe reads incentives, not coordination). H-TARA-3 is refuted
-if AUROC drops by more than 0.10 from dev to held-out families.
+**PROBLEM:** AI developers may use AI agents to run safety evaluations and summarize results. If agents omit tests or misreport outcomes, humans could underestimate dangerous capabilities and grant unsafe permissions. This could weaken safeguards against loss of control over powerful AI systems.
 
-**Skills from the curriculum this uses:** transformer architecture (residual stream,
-activations, tokenization), mechanistic interpretability (linear probes, confound
-controls), model evaluations (AUROC, bootstrap, preregistration, held-out splits).
+**GOAL:** I will build a small evaluation for AI investigators that inspect faulty safety evaluations. It will measure whether investigators find useful evidence, recommend effective repairs, and avoid unsupported approvals or accusations.
 
-**Compute and data needs:** 16 GB laptop CPU or free Colab GPU; Qwen2.5-1.5B-Instruct
-weights (about 3 GB); 300 to 600 labeled trajectories (existing from the sprint; extra seeds
-cost USD 5 to 15 through an OpenAI-compatible API).
+**PROJECT PLAN:** I will build a small, executable evaluation workflow with clean cases and controlled failures in test execution, scoring, and reporting. Investigators will receive limited access to logs, raw results, and reruns. I will compare a standard investigation prompt, an explicit checklist, and a structured evidence record under matched evidence and computation budgets. I will execute recommended repairs and measure repair success, approval decisions, unsupported causal claims, and cost. I will evaluate on held-out failure families.
 
-**Three-week plan:**
-- Week 1: preregistration; extraction pipeline; layer sweep on 100 trajectories; the
-  E0-versus-A anti-confound check first.
-- Week 2: full extraction; probes per layer; family transfer; comparison with behavioral
-  auditors; tables with intervals.
-- Week 3: ablations (messages-only text versus full); error analysis of false positives per
-  innocent regime; presentation.
+**Suggested feasibility:** 3/5.
 
-**Risks and fallback:** If sprint LLM agents produce no separable coordination behavior,
-there is nothing to probe. Fallback (H-TARA-F1): an evaluations project testing whether
-explicit provenance disclosure lowers a reviewer model's false approval rate on
-derivative-heavy cases without lowering its true approval rate. Same code, one new factor,
-no activations required.
+**Suggested area:** AI evaluations and AI control.
 
-## 3. Preexisting work statement
+**Open to collaborators:** pending owner preference.
 
-The review game and auditors were built during the Apart sprint (2026-10-23 to 2026-10-25).
-The TARA project adds the activation pipeline, probes, and anti-confound analysis. Concepts
-of claim provenance come from my earlier Grid Nowcast ontology work; no code from it is used.
+## Idea 2: Which Evidence Checks Prevent False Assurance in AI Evaluations?
+
+Role: recommended second idea.
+
+**Project title:** Which Evidence Checks Prevent False Assurance in AI Evaluations?
+
+**PROBLEM:** AI safety reviews can approve reassuring reports that omit required tests or extend results beyond their supported scope. If these reports guide deployment, humans may give powerful AI systems more access than the evidence warrants. Several reviewers can repeat the same mistake when they rely on one report.
+
+**GOAL:** I will produce a reproducible set of evaluation artifacts and compare ways to check their claims. The goal is to identify evidence checks that prevent unsupported approvals while preserving warranted approvals.
+
+**PROJECT PLAN:** I will create paired reports with complete evidence, omitted results, incorrect scoring, and unsupported changes in model version or scope. I will compare an explicit prose checklist with typed claim fields, both with and without access to independent artifacts. I will include simple executable checks as baselines. I will measure unsupported approvals, warranted approvals, deferrals, and review cost on held-out failure families. This separates benefits from clearer representation and benefits from additional trusted evidence.
+
+**Suggested feasibility:** 3/5.
+
+**Suggested area:** AI evaluations and scalable oversight.
+
+**Open to collaborators:** pending owner preference.
+
+## Idea 3: Can Artifact Sanitization Reduce Coordination Against AI Monitors?
+
+Role: optional third idea.
+
+**Project title:** Can Artifact Sanitization Reduce Coordination Against AI Monitors?
+
+**PROBLEM:** An untrusted AI system and an untrusted monitor could use shared artifact features to coordinate against an oversight protocol. Blocking private messages may leave these cues available. If the monitor approves harmful outputs, humans could lose an important safeguard around powerful AI systems.
+
+**GOAL:** I will test whether transformations that preserve program behavior disrupt compatible subversion strategies without reducing legitimate defect detection. The project will produce a bounded replication and a comparison of candidate defenses.
+
+**PROJECT PLAN:** I will first attempt a small replication of published focal-point subversion in a programming-task setting. I will freeze sampled strategies and compare unchanged programs, comment removal, and validated identifier normalization. I will check program behavior before and after each transformation. I will measure verified defects accepted by monitors that still pass audits, ordinary defect detection, and useful task performance. If replication does not produce suitable cases within the declared budget, I will report that limit and restrict the project to the replication.
+
+**Suggested feasibility:** 2/5.
+
+**Suggested area:** AI control and multi-agent safety.
+
+**Open to collaborators:** pending owner preference.
+
+## Prior work and scope
+
+The proposal makes no novelty claim. Review the linked candidate briefs before final project selection.
+
+[Candidate briefs](../../literature/landscape/brainstorming/candidate-briefs.md).
+
+[Interactive reading pages](../../explainer/research.html).
+
+The earlier probe proposal is preserved in `topic-submission-2026-10-23.md`.

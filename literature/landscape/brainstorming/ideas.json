@@ -1,0 +1,562 @@
+{
+  "schema_version": 1,
+  "updated": "2026-10-28",
+  "title": "Research brainstorming",
+  "epistemic_status": "speculation",
+  "description": "Proposed research directions grounded in epistemology, ontology, game theory, and industry mechanisms. No project choice or novelty claim is implied.",
+  "ideas": [
+    {
+      "id": "B01",
+      "title": "When does an evaluation claim become permission to deploy",
+      "lens": "Ontology",
+      "industry": "Engineering certification",
+      "question": "Can explicit claim types stop evidence for a narrow test result from becoming approval of a broader safety claim?",
+      "foundation": "Ontology separates the objects and predicates in a claim. Construct validity asks whether the measurement warrants the intended interpretation.",
+      "mechanism": "A report moves from 'no failure observed on these evaluated cases' to 'the model is safe for this deployment'. The missing scope conditions disappear.",
+      "analogy_limit": "Certification is an industry-inspired design lens here. A valid claim structure cannot make a false measurement true or establish deployment safety.",
+      "safety_path": "An unsupported safety claim could authorize deployment or suppress further investigation. A scope check acts at that authority transition.",
+      "experiment": "Build executable small-model evaluations with paired reports. Keep results fixed while varying task scope, time, model version, and approval language. Compare free-text review, typed claims, and typed claims checked against trusted run metadata.",
+      "metrics": "Unsupported approvals; warranted approvals; unnecessary deferrals; review cost. Include maliciously incorrect metadata as a separate condition.",
+      "kill_criterion": "If benefits disappear when both protocols receive the same information and review budget, there is no evidence for the structural intervention.",
+      "prior_work": [
+        "R11",
+        "T5"
+      ],
+      "delta": "Proposed comparison: claim scope at the approval step. Existing ontology-aware assurance methods still need review.",
+      "topics": [
+        "evaluations",
+        "formal-methods",
+        "oversight-control"
+      ],
+      "related": [
+        "B07",
+        "B10",
+        "B13"
+      ],
+      "scope": "Three-week candidate",
+      "next_step": "Implement ten paired cases with machine-checkable run scope before generating model outputs."
+    },
+    {
+      "id": "B02",
+      "title": "Which observation separates competing explanations of failure",
+      "lens": "Epistemology",
+      "industry": "Incident investigation",
+      "question": "Can an investigator choose a useful next test when several causal explanations fit the same agent record?",
+      "foundation": "Underdetermination permits several explanations of one observation. Causal identification requires assumptions and evidence that distinguish them.",
+      "mechanism": "The same invalid approval can follow shared evidence, conformity, selective disclosure, or coordination. Another verbal explanation may add little evidence.",
+      "analogy_limit": "Competing causal explanations resemble the Rashomon narrative effect. They are not a predictive Rashomon set, and a simulation's causes may be oversimplified.",
+      "safety_path": "A team that identifies the wrong cause may patch an irrelevant prompt while leaving the real route to an unsafe action open.",
+      "experiment": "Create matched executable failures with a known generating mechanism. Give investigators an initial partial record and a fixed budget to reveal provenance, hide peer outputs, rerun a component, or inspect a raw result. Compare their chosen investigations with random and predetermined checks.",
+      "metrics": "Correct cause set retained; incorrect exclusions; downstream repair success; investigation cost. Score uncertainty when several causes remain compatible.",
+      "kill_criterion": "If the available interventions cannot distinguish mechanisms even with full access, redesign the case rather than score one explanation as uniquely correct.",
+      "prior_work": [
+        "T4",
+        "S1",
+        "T10",
+        "T11"
+      ],
+      "delta": "AuditBench already evaluates tool-using investigators; CausalGame evaluates active causal experiments. Proposed narrower comparison: selecting diagnostic checks and retaining uncertainty in an executable oversight failure.",
+      "topics": [
+        "theory",
+        "multi-agent",
+        "evaluations"
+      ],
+      "related": [
+        "B04",
+        "B09",
+        "B14"
+      ],
+      "scope": "Three-week candidate",
+      "next_step": "Construct identical initial records under two causes and specify an intervention with different predictions. See candidate B17."
+    },
+    {
+      "id": "B03",
+      "title": "Can a public safety threshold become a coordination cue",
+      "lens": "Game theory",
+      "industry": "Power markets",
+      "question": "Do public thresholds help agents align harmful actions when they cannot send direct messages?",
+      "foundation": "A focal point is a salient option agents expect others to choose. A public signal can support coordination without a private channel.",
+      "mechanism": "A visible threshold or reference policy may concentrate choices. Baseline similarity, shared incentives, and strategic response to a cue must be separated.",
+      "analogy_limit": "The electricity source concerns regulated retail reference prices. It does not show that every wholesale price cap causes collusion. Public cues can also improve legitimate coordination.",
+      "safety_path": "A control protocol that removes direct messages may still expose common cues that untrusted agents can use. Risk depends on an implemented harmful objective.",
+      "experiment": "Start with an executable oversight task where one agent can submit a defective artifact and another controls escalation. Randomize a payoff-irrelevant public cue; privately relabel equivalent options; vary incentives; and retain a no-cue control. Verify that option meaning and task difficulty stay matched.",
+      "metrics": "Cue-dependent joint behavior; verified harmful outcomes; baseline action similarity; benefit of a cue beyond the no-cue condition.",
+      "kill_criterion": "If cue effects occur equally without a coordination incentive, report shared salience. Do not call that strategic coordination or collusion.",
+      "prior_work": [
+        "T2",
+        "T7",
+        "T8",
+        "T9",
+        "R11"
+      ],
+      "delta": "T9 directly studies focal-point subversion of an audited policy-monitor protocol. T8 separates baseline and strategic similarity. A contribution needs a tested defense or bounded replication, such as B16.",
+      "topics": [
+        "multi-agent",
+        "oversight-control",
+        "systemic-risk"
+      ],
+      "related": [
+        "B05",
+        "B08",
+        "B12"
+      ],
+      "scope": "Ambitious",
+      "next_step": "Read T9 methods before designing the environment. Distinguish isolated strategy construction from the artifact channel connecting policy and monitor."
+    },
+    {
+      "id": "B04",
+      "title": "How much do equally accurate monitors disagree on dangerous cases",
+      "lens": "Epistemology",
+      "industry": "Model risk management",
+      "question": "Can monitors with similar validation accuracy make different decisions on the same consequential cases?",
+      "foundation": "A Rashomon set contains predictive models with loss close to the best in a specified class. Predictive multiplicity concerns their different predictions.",
+      "mechanism": "Selecting one monitor by average accuracy can hide variation in which unsafe cases pass. Aggregate agreement may also hide shared misses.",
+      "analogy_limit": "A handful of prompts does not enumerate the Rashomon set of all language models. Define a bounded candidate class and a fixed tolerance.",
+      "safety_path": "A safety argument based on one selected monitor may depend on an arbitrary selection among similarly performing alternatives.",
+      "experiment": "Fit simple monitors on features of executable evaluation artifacts. Define the candidate class and acceptable validation loss before testing. Measure disagreement and joint misses on held-out defect families, then compare a budget-matched combination with individual monitors.",
+      "metrics": "Prediction range per artifact; joint miss rate; warranted approvals; validation-to-test change; review cost.",
+      "kill_criterion": "If candidate accuracy is too different, match quality before attributing results to predictive multiplicity.",
+      "prior_work": [
+        "T3",
+        "R11"
+      ],
+      "delta": "Proposed application: multiplicity of safety-monitor decisions. Existing multiplicity work and control ensembles require a closer comparison.",
+      "topics": [
+        "evaluations",
+        "oversight-control",
+        "theory"
+      ],
+      "related": [
+        "B02",
+        "B05",
+        "B11"
+      ],
+      "scope": "Three-week candidate",
+      "next_step": "Use cheap fitted monitors first; determine whether consequential prediction disagreement exists."
+    },
+    {
+      "id": "B05",
+      "title": "Does independent evidence help more than an additional reviewer",
+      "lens": "Reliability",
+      "industry": "Power-system reliability",
+      "question": "At equal review cost, does a fresh measurement prevent more shared misses than another model opinion?",
+      "foundation": "Evidence independence differs from the number of agents. A common-cause failure can defeat several review stages at once.",
+      "mechanism": "Different reviewers may consume one incorrect report, scoring script, or summary. More reviewers can preserve the same blind spot.",
+      "analogy_limit": "Removing one review component resembles a contingency test, but AI monitors lack the engineering guarantees of power-system reliability criteria. No compliance claim follows.",
+      "safety_path": "Repeated approvals can create false assurance if every review depends on the same corrupted evaluation artifact.",
+      "experiment": "Plant scoring and reporting defects with executable ground truth. Compare repeated review of one report, different-model review, and one reviewer with independently recomputed evidence. Inject one shared upstream defect and hold useful work and cost approximately matched.",
+      "metrics": "All-reviewer miss rate; incremental cases caught; unwarranted flags; total cost; honest-task usefulness.",
+      "kill_criterion": "If recomputation wins only by receiving more budget or stronger labels, the proposed evidence advantage is unproven.",
+      "prior_work": [
+        "R11",
+        "T6",
+        "T1"
+      ],
+      "delta": "Proposed comparison: model variation versus an independently recomputed measurement. Monoculture alone is already established prior work.",
+      "topics": [
+        "oversight-control",
+        "multi-agent",
+        "systemic-risk"
+      ],
+      "related": [
+        "B04",
+        "B06",
+        "B11"
+      ],
+      "scope": "Three-week candidate",
+      "next_step": "Pick one metric that can be recomputed cheaply from immutable evaluation outputs."
+    },
+    {
+      "id": "B06",
+      "title": "Can a report be entirely true and still create false assurance",
+      "lens": "Epistemology",
+      "industry": "Financial and research reporting",
+      "question": "Will a reviewer notice that reassuring evidence is selected from an incomplete evaluation?",
+      "foundation": "Strategic persuasion can change belief through selection. Testimony can be accurate while failing to disclose relevant evidence.",
+      "mechanism": "A report presents true successful cases but omits failures or changes the denominator. The local sentences remain true while the conclusion becomes unsupported.",
+      "analogy_limit": "The reporting comparison is illustrative. Omission can be ordinary summarization, so score violation of a stated reporting requirement rather than infer intent.",
+      "safety_path": "Selective disclosure could make a dangerous capability evaluation appear reassuring and prevent escalation.",
+      "experiment": "Use a trusted runner to retain all intended test cases and outcomes. Pair complete reports with selectively disclosed reports. Compare summary review, provenance access, and comparison with a trusted test manifest. Include incomplete but explicitly qualified reports as controls.",
+      "metrics": "Approvals despite a violated reporting requirement; missed omissions; unnecessary rejections of qualified reports; review cost.",
+      "kill_criterion": "If the manifest omits the same cases as the report, the protocol has no independent completeness evidence and cannot establish completeness.",
+      "prior_work": [
+        "R8",
+        "R14",
+        "T1",
+        "S14"
+      ],
+      "delta": "S14 already includes omission attacks; T1 studies research sabotage. Proposed comparison: completeness checks with independently trusted records, including strong prompt and simple-rule baselines. See B15.",
+      "topics": [
+        "evaluations",
+        "oversight-control",
+        "multi-agent"
+      ],
+      "related": [
+        "B01",
+        "B05",
+        "B07"
+      ],
+      "scope": "Three-week candidate",
+      "next_step": "Write exact completeness requirements and generate paired reports from identical execution records."
+    },
+    {
+      "id": "B07",
+      "title": "Does unknown evidence become evidence of safety",
+      "lens": "Ontology",
+      "industry": "Operational availability records",
+      "question": "Can explicit unknown states prevent missing or stale evidence from becoming an approval?",
+      "foundation": "Ontology distinguishes not tested, tested without a detected failure, unavailable evidence, and a warranted approval. These states license different actions.",
+      "mechanism": "An empty result or old certificate is summarized as 'no safety issues'. Missing evidence silently becomes negative evidence.",
+      "analogy_limit": "A missing outage record does not establish availability; similarly, a missing failure record does not establish safety. Domain-specific approval criteria still differ.",
+      "safety_path": "Unavailable or stale evaluations may fail to stop deployment if the decision process treats absence as a pass.",
+      "experiment": "Vary evidence state while keeping the underlying model and task fixed: completed test, skipped test, failed runner, stale result, or wrong model version. Compare binary pass/fail summaries with explicit states and metadata validation.",
+      "metrics": "Invalid approvals by evidence state; correct deferrals; warranted approvals; number of new tests requested.",
+      "kill_criterion": "If the protocol defers everything, reduced invalid approvals do not show useful oversight.",
+      "prior_work": [
+        "T5",
+        "R11"
+      ],
+      "delta": "Proposed application of typed evidence states. Existing assurance and missing-data handling methods need review.",
+      "topics": [
+        "evaluations",
+        "formal-methods",
+        "deployment"
+      ],
+      "related": [
+        "B01",
+        "B06",
+        "B10"
+      ],
+      "scope": "Three-week candidate",
+      "next_step": "Build an explicit state table and define the allowed action for each state."
+    },
+    {
+      "id": "B08",
+      "title": "Can review rules make harmful coordination unnecessary",
+      "lens": "Game theory",
+      "industry": "Market mechanism design",
+      "question": "Which information and approval rules reduce harmful outcomes without requiring proof of collusion?",
+      "foundation": "Mechanism design chooses rules for collective outcomes. A principal-agent problem can remain even if direct communication is blocked.",
+      "mechanism": "An approval rule can make independent misconduct profitable or can require multiple agents to coordinate. The rule changes the need for a coalition.",
+      "analogy_limit": "A prompt describing a payoff does not implement a financial incentive or train an objective. Begin with executable policies and call language-model tests prompt-conditioned.",
+      "safety_path": "A protocol may prevent an unsafe action even when an investigator cannot identify whether its attempted cause was coordination.",
+      "experiment": "Specify a small game with observable artifact quality and verified harm. Solve scripted-agent cases first. Compare approval rules, randomized independent checks, and restricted evidence selection under matched usefulness. Add language models only after the game requires the intended strategy.",
+      "metrics": "Maximum harmful success among evaluated strategies; honest-task completion; audit cost; sensitivity to the assumed strategy class.",
+      "kill_criterion": "If a single agent can produce the same harm unaided, the experiment cannot attribute that harm to a coalition.",
+      "prior_work": [
+        "R7",
+        "R9",
+        "R11",
+        "T8"
+      ],
+      "delta": "Control protocols already study intentional subversion. Proposed focus: how the approval rule changes whether coordination adds harmful capability.",
+      "topics": [
+        "oversight-control",
+        "multi-agent",
+        "learning-objectives"
+      ],
+      "related": [
+        "B03",
+        "B05",
+        "B12"
+      ],
+      "scope": "Ambitious",
+      "next_step": "Write and solve the payoff table before building a new language-model environment."
+    },
+    {
+      "id": "B09",
+      "title": "What evidence should an investigator request next",
+      "lens": "Decision theory",
+      "industry": "Incident triage",
+      "question": "Can a model spend a limited investigation budget on evidence that changes the correct action?",
+      "foundation": "Value of information measures expected decision improvement. More detailed explanations need not improve decisions.",
+      "mechanism": "An investigator can choose another opinion, raw measurements, provenance, a rerun, or a counterexample. Their diagnostic value differs by failure mechanism.",
+      "analogy_limit": "The case distribution determines information value. A protocol fitted to one simulated failure mix may not transfer.",
+      "safety_path": "Human review is scarce. Poor evidence requests can leave decisive failures unchecked despite extensive discussion.",
+      "experiment": "Give an investigator a menu of evidence requests with explicit costs. Compare fixed requests, random requests, and adaptive requests. Evaluate on new defect families and report both action quality and retained uncertainty.",
+      "metrics": "Decision loss at a fixed budget; avoidable invalid approvals; unnecessary deferrals; cost per consequential defect found.",
+      "kill_criterion": "If costs are arbitrary or the investigator sees the answer in a request label, apparent efficiency is not meaningful.",
+      "prior_work": [
+        "T4",
+        "R11",
+        "T10",
+        "T11"
+      ],
+      "delta": "Active causal experiments and configurable investigator tools are existing work. A candidate extension scores decision quality, uncertainty, and repair success under a measured evidence budget.",
+      "topics": [
+        "oversight-control",
+        "human-factors",
+        "theory"
+      ],
+      "related": [
+        "B02",
+        "B06",
+        "B13"
+      ],
+      "scope": "Three-week candidate",
+      "next_step": "Price evidence requests from measured tool usage or human time rather than invented weights."
+    },
+    {
+      "id": "B10",
+      "title": "Can an unsupported claim gain authority through repeated summaries",
+      "lens": "Social epistemology",
+      "industry": "Records and institutional memory",
+      "question": "Does a speculative claim become accepted evidence after passing through several agent summaries?",
+      "foundation": "Epistemic authority affects reliance. Provenance and typed claims can preserve who observed something and what remains uncertain.",
+      "mechanism": "An agent conjectures, another summarizes, and a later agent cites the summary as confirmation. A circular reference can look like independent support.",
+      "analogy_limit": "Repeated summaries can legitimately compress evidence. The failure is loss of scope or support, not compression itself.",
+      "safety_path": "Long-running AI research workflows may use accumulated summaries to justify decisions. An unsupported safety claim could persist across sessions.",
+      "experiment": "Seed a controlled research memory with one unsupported claim and trace it through matched summarization chains. Compare ordinary text, preserved evidence links, and typed uncertainty. Insert a conflicting raw result and test whether later decisions update.",
+      "metrics": "Unsupported promotions; false independence counts; correction uptake; useful information retained; context cost.",
+      "kill_criterion": "If the typed version simply receives more evidence or context, match access before interpreting the result.",
+      "prior_work": [
+        "R1",
+        "R2",
+        "T5"
+      ],
+      "delta": "Proposed transfer to persistent safety-research memory. Existing citation and memory-integrity methods need comparison.",
+      "topics": [
+        "agent-security",
+        "data-safety",
+        "multi-agent"
+      ],
+      "related": [
+        "B01",
+        "B07",
+        "B11"
+      ],
+      "scope": "Three-week candidate",
+      "next_step": "Define a tiny provenance graph with one supported claim, one conjecture, and one circular reference."
+    },
+    {
+      "id": "B11",
+      "title": "Can review diversity be measured by unique failures caught",
+      "lens": "Reliability",
+      "industry": "Independent protection layers",
+      "question": "Which differences between reviewers actually reduce the chance that every reviewer misses the same defect?",
+      "foundation": "Algorithmic monoculture concerns shared decision procedures. Evidence independence cannot be inferred from different reviewer names or model providers.",
+      "mechanism": "Different prompts can yield different explanations but identical misses. Distinct tools or private measurements may instead change failure coverage.",
+      "analogy_limit": "Different error sets can also arise because one reviewer is simply less accurate. Match individual quality and cost before attributing value to diversity.",
+      "safety_path": "An oversight protocol may spend heavily on redundant judgments while leaving its most consequential blind spots unchanged.",
+      "experiment": "Compare reviewer groups differing in model, prompt, evidence, or checking tool. Keep individual accuracy and budget as comparable as possible. Evaluate unique catches and joint misses on held-out defect families.",
+      "metrics": "Joint miss rate; unique consequential catches per additional review; unwarranted flags; cost; stability across defect families.",
+      "kill_criterion": "If improvements vanish on held-out defects, reviewer differences may fit the development examples rather than improve protection.",
+      "prior_work": [
+        "T6",
+        "T8",
+        "R11"
+      ],
+      "delta": "Proposed operational measure: incremental failure coverage in executable safety evaluations. Ensemble control literature is a required comparison.",
+      "topics": [
+        "oversight-control",
+        "multi-agent",
+        "evaluations"
+      ],
+      "related": [
+        "B04",
+        "B05",
+        "B10"
+      ],
+      "scope": "Three-week candidate",
+      "next_step": "Build an artifact-by-reviewer error matrix and identify whether any additional review catches a unique failure."
+    },
+    {
+      "id": "B12",
+      "title": "Does publishing a safety metric change the behavior it measures",
+      "lens": "Game theory",
+      "industry": "Market response to public rules",
+      "question": "Can public knowledge of an evaluation threshold shift agents toward passing the metric while violating its intended purpose?",
+      "foundation": "Construct validity connects a measured quantity to a target property. Strategic agents can respond to a public decision rule.",
+      "mechanism": "A threshold changes behavior, so evidence gathered before agents knew the rule may not predict behavior afterward.",
+      "analogy_limit": "This is a proposed connection to market responses, not a claim that benchmark gaming and market collusion share the same mechanism.",
+      "safety_path": "A publicly known safety test could become less informative about behavior outside that test.",
+      "experiment": "Use an executable artifact-quality task. Vary whether an untrusted agent knows the monitoring criterion, while holding its task and objective fixed. Evaluate on private conditions and compare changing criteria with stable, independently checked requirements.",
+      "metrics": "Public-test pass rate; held-out defect rate; monitor miss rate; usefulness; dependence on disclosed information.",
+      "kill_criterion": "If the hidden conditions measure a different intended property, the gap cannot establish gaming of the original metric.",
+      "prior_work": [
+        "T5",
+        "R11",
+        "T1"
+      ],
+      "delta": "Evaluation awareness is a broad existing topic. Proposed comparison must identify a specific new rule or defense.",
+      "topics": [
+        "evaluations",
+        "learning-objectives",
+        "oversight-control"
+      ],
+      "related": [
+        "B03",
+        "B08",
+        "B13"
+      ],
+      "scope": "Ambitious",
+      "next_step": "Choose one metric with an explicit intended property and list shortcuts that violate it."
+    },
+    {
+      "id": "B13",
+      "title": "Can evidence-backed review improve a human deployment decision",
+      "lens": "Social epistemology",
+      "industry": "Safety assurance",
+      "question": "Does showing the link between a safety claim and its supporting test help a human recognize an unsupported approval?",
+      "foundation": "Testimony and epistemic authority explain reliance on experts. A safety decision also needs a justified link from evidence to action.",
+      "mechanism": "Polished explanations may induce reliance without exposing the assumptions that connect a test result to a deployment claim.",
+      "analogy_limit": "A small human study measures decisions in its task, not real deployment behavior or catastrophic-risk reduction. Consent and recruitment need a separate study plan.",
+      "safety_path": "Human authority over deployment is ineffective if the evidence interface hides what the tests actually establish.",
+      "experiment": "Begin with a machine-scored pilot comparing plain reports, reports with provenance, and reports with explicit scope conditions. If feasible later, ask human reviewers to make bounded approval decisions on matched examples.",
+      "metrics": "Invalid approvals; warranted approvals; appropriate deferrals; review time; calibration of confidence.",
+      "kill_criterion": "If the evidence display improves recall but not decisions, do not claim improved safety oversight.",
+      "prior_work": [
+        "R1",
+        "R2",
+        "R3",
+        "T5"
+      ],
+      "delta": "Proposed test of evidence-to-action links in a safety-evaluation workflow. Human-factors prior work remains to be assessed.",
+      "topics": [
+        "human-factors",
+        "governance",
+        "evaluations"
+      ],
+      "related": [
+        "B01",
+        "B09",
+        "B12"
+      ],
+      "scope": "Pilot first",
+      "next_step": "Define correct decisions from explicit requirements before planning a human experiment."
+    },
+    {
+      "id": "B14",
+      "title": "Can a protocol stay safe while the cause remains unresolved",
+      "lens": "Decision theory",
+      "industry": "Operational incident response",
+      "question": "Can conservative action rules prevent verified harm without forcing an investigator to decide whether agents colluded?",
+      "foundation": "Underdetermination concerns belief about causes. A decision can still be justified when several causes support the same protective action.",
+      "mechanism": "An unsafe artifact may warrant blocking whether it arose through error, persuasion, or coordination. Investigation and execution require different standards.",
+      "analogy_limit": "Deferring every action is safe only in a narrow sense. Real usefulness, delay, and missed opportunities must enter the decision criterion.",
+      "safety_path": "A protocol that waits for proof of malicious intent may permit an unsafe action even when the artifact itself provides sufficient grounds to stop.",
+      "experiment": "Reuse artifacts with known failures and ambiguous agent records. Compare intent-dependent escalation with checks of explicit action requirements. Match unwarranted flags and measure both harm prevention and retained honest-task completion.",
+      "metrics": "Verified harmful actions allowed; warranted approvals; false accusations if any are made; delay and review cost.",
+      "kill_criterion": "If all failures are detectable by a trivial check, the setting says little about oversight under meaningful uncertainty.",
+      "prior_work": [
+        "R11",
+        "T4"
+      ],
+      "delta": "AI control already prioritizes outcomes under subversion. Proposed addition: measure the cost of requiring causal attribution before intervention.",
+      "topics": [
+        "oversight-control",
+        "theory",
+        "multi-agent"
+      ],
+      "related": [
+        "B02",
+        "B08",
+        "B09"
+      ],
+      "scope": "Three-week candidate",
+      "next_step": "Identify a case where stopping an action is justified but its causal explanation remains ambiguous."
+    },
+    {
+      "id": "B15",
+      "title": "Which evidence checks prevent false assurance in delegated evaluations",
+      "lens": "Ontology",
+      "industry": "Engineering certification",
+      "question": "At a fixed review budget, do independent evidence checks reduce unsupported safety approvals more than additional report reviews?",
+      "foundation": "Construct validity concerns the interpretation of measurements. Ontology distinguishes observed results, scope conditions, and warranted approval.",
+      "mechanism": "An agent-generated report can be locally accurate while omitting a relevant case or extending a result to an unsupported model version or condition.",
+      "analogy_limit": "A claim schema cannot establish that the underlying measurements are true. Trusted metadata and recomputation provide different information and must be compared explicitly.",
+      "safety_path": "An evaluation team could use the result to decide how much review budget to allocate to prose, metadata checks, and independent measurement.",
+      "experiment": "Use executable small-model evaluations with clean cases and controlled defects. Match review access and total cost across free-text review, an explicit checklist, typed claims, and independent artifact checks. Hold out defect families and include incomplete reports that correctly request deferral.",
+      "metrics": "Unsupported approvals at matched warranted-approval rate; cost; deferrals; errors by defect family. Report layout-only effects separately from benefits of additional trusted evidence.",
+      "kill_criterion": "Drop the ontology claim if it beats only a weak prompt. Drop the model component if a simple trusted check solves the entire setting.",
+      "prior_work": [
+        "T5",
+        "S14",
+        "T1",
+        "R11",
+        "T12"
+      ],
+      "delta": "Omission and research sabotage are prior work. Proposed comparison: how representation and independent evidence access affect approvals under a shared review budget. Novelty remains unverified.",
+      "topics": [
+        "evaluations",
+        "oversight-control",
+        "formal-methods"
+      ],
+      "related": [
+        "B01",
+        "B05",
+        "B06",
+        "B07"
+      ],
+      "scope": "Candidate project",
+      "next_step": "Read candidate-briefs.md, candidate 1. Build a deterministic approval oracle and paired artifact examples before any model run."
+    },
+    {
+      "id": "B16",
+      "title": "Which coordination cues survive artifact sanitization",
+      "lens": "Game theory",
+      "industry": "Power-market focal points",
+      "question": "Can semantics-preserving artifact transformations disrupt compatible subversion strategies without degrading legitimate review?",
+      "foundation": "Focal points can align independently constructed strategies. Different information carriers must be specified rather than treating absence of private messages as absence of communication.",
+      "mechanism": "A policy and a monitor can use salient artifact features to make the monitor pass ordinary checks yet approve the policy's defective output.",
+      "analogy_limit": "A price rule is not a code artifact. Sanitization that changes executable behavior or removes evidence of defects cannot isolate the coordination mechanism.",
+      "safety_path": "An AI-control designer could test whether restricting artifact cues reduces harmful policy-monitor compatibility at an acceptable usefulness cost.",
+      "experiment": "Begin with a small replication of T9. Freeze successful strategy pairs before comparing comment removal, safe identifier normalization, and unchanged artifacts. Execute reference tests before and after transformation. Include honest monitors and ordinary flawed programs to detect lost review information.",
+      "metrics": "Verified defect accepted while the monitor passes audits; ordinary defect detection; legitimate task performance; transformation validity; performance after strategy adaptation.",
+      "kill_criterion": "Stop if the replication yields no compatible strategies within the declared budget. Do not call reduced success a defense if transformed programs change behavior.",
+      "prior_work": [
+        "T9",
+        "T8",
+        "R11",
+        "T2",
+        "T7"
+      ],
+      "delta": "T9 already studies focal-point monitoring subversion and removes comments. A candidate extension compares additional validated transformations and adaptation. Related redaction work still needs review.",
+      "topics": [
+        "multi-agent",
+        "oversight-control",
+        "agent-security"
+      ],
+      "related": [
+        "B03",
+        "B08",
+        "B11"
+      ],
+      "scope": "Candidate project",
+      "next_step": "Read candidate-briefs.md, candidate 2. Verify task availability and strategy-generation cost before promising a three-week evaluation."
+    },
+    {
+      "id": "B17",
+      "title": "Can investigators distinguish unresolved causes from actionable defects",
+      "lens": "Epistemology",
+      "industry": "Incident investigation",
+      "question": "Can an investigator gather useful evidence and choose a safe action without making unsupported accusations about the cause?",
+      "foundation": "Causal underdetermination can persist after a defect is established. Belief about intent and permission for an action require different evidence.",
+      "mechanism": "An investigator may find a real defect, attribute it to the wrong cause, and select a repair that leaves the actual failure route open.",
+      "analogy_limit": "Generated cases can create artificial ambiguity. Causes must have identical initial observables and genuinely different intervention predictions where identification is possible.",
+      "safety_path": "An AI safety team could use the result to decide when to investigate more, when to withhold a causal verdict, and when a verified defect already warrants blocking.",
+      "experiment": "Build an executable evaluation workflow with matched clean cases, runner faults, reporting errors, and explicit red-team interventions. Give investigators budgeted access to logs, configurations, and reruns. Compare a single-verdict prompt, a structured evidence record, and fixed diagnostic checks.",
+      "metrics": "Correct action; repair success; unsupported causal accusations; appropriate uncertainty; investigation cost. Score identifying a candidate cause separately from proving it.",
+      "kill_criterion": "Drop cases whose causes cannot be separated by any available evidence unless correct uncertainty is their explicit target. Stop if case wording leaks the generating mechanism.",
+      "prior_work": [
+        "T10",
+        "T11",
+        "T4",
+        "R11"
+      ],
+      "delta": "Tool-using investigators and causal experimental design already exist. Proposed addition: separate scores for causal attribution, justified uncertainty, and outcome protection on the same task. Novelty remains unverified.",
+      "topics": [
+        "theory",
+        "oversight-control",
+        "evaluations"
+      ],
+      "related": [
+        "B02",
+        "B09",
+        "B14"
+      ],
+      "scope": "Candidate project",
+      "next_step": "Read candidate-briefs.md, candidate 3. Construct one matched case pair and one deliberately non-identifiable case."
+    }
+  ]
+}

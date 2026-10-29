@@ -9,6 +9,13 @@ truth, and it does not produce research findings.
 
 ## Open it
 
+The new [research study companion](research.html) adds eight chapters on evidence,
+diagnosis, repair, and catastrophic-risk relevance. It includes expense and investigation
+exercises, focal-point and risk-pathway demonstrations, self-checks, local notes,
+and copy-ready answers for all three project ideas.
+Its readings come from the canonical brainstorming guides.
+Run `python3 tools/build-study-pages.py` after changing those guides or `form-answers.json`.
+
 There is no build step and no install. Open the page directly:
 
 ```text
@@ -34,7 +41,7 @@ from `file://` as well.
 | Overview | The organizing question, four lenses, concept map, and a seven-page reading path. |
 | Foundations | One page each for F00 to F08, following the six-step teaching order: Purpose, Intuition, Mechanism, Formalism, Example, Significance. |
 | Conditions | Assumptions and failure modes for every foundation, plus an eight-regime workbench with matched contrasts. |
-| Glossary | All 106 terms from `GLOSSARY.md`, with sections, banned synonyms, and links back to the pages where each term appears. |
+| Glossary | Terms generated from `GLOSSARY.md`, with sections, banned synonyms, and links back to the pages where each term appears. |
 | Search | One index over concepts, terms, and regimes. Press `/` or use the search button. |
 | Self-check | One quiz per foundation, scored in the browser. No answers are stored. |
 
@@ -72,6 +79,9 @@ both as explanations of a method, not as evidence about a model.
 | `assets/glossary-data.js` | Generated glossary data. Do not edit by hand. |
 | `assets/foundations-data.js` | Hand-authored page content for F00 to F08. |
 | `assets/site-data.js` | Lenses, map explanations, reading path, regimes, and contrasts. |
+| `research.html`, `assets/research.js`, `assets/research.css` | Interactive reading path, exercises, notes, and form answers. |
+| `assets/research-data.js` | Generated readings, idea records, and form drafts. Edit canonical sources instead. |
+| `../tools/build-study-pages.py` | Regenerates study content and `TOPIC-SUBMISSION.md` from canonical records. |
 | `../tools/build-glossary.py` | Rebuilds `glossary-data.js` from `GLOSSARY.md`. |
 
 Routes use the hash fragment, for example `#/foundation/01`,

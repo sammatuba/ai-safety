@@ -17,6 +17,8 @@ Source of truth for routing: `tools/routes.json`. Bundle for paste-in tools:
 | `hypothesis` | `hypotheses/HYPOTHESES.md`, `threat-models.md`, `confounds.md` | Adding or revising a hypothesis. |
 | `plan` | `ROADMAP.md`, `DECISIONS.md`, `STATUS.md` | Re-planning. |
 | `study` | `study/STUDY-PLAN.md`, `GLOSSARY.md`, `foundations/00-map.md` | A learning session. |
+| `landscape` | landscape `README.md`, landscape project `PLAN.md`, `topics.json`, `coverage.md` | Persistent field map, source database, and collection ledger. |
+| `brainstorm` | brainstorming guide, investigation study guide, prior-work review, candidate briefs, `ideas.json`, glossary, literature index | Conceptual grounds, teaching examples, speculative connections, and proposed experiments. |
 | `explainer` | `explainer/README.md`, `GLOSSARY.md`, `foundations/00-map.md` | Running or updating the interactive learning layer. |
 | `foundations-all` | all nine foundations documents | Full conceptual load (large). |
 
@@ -64,6 +66,8 @@ Source of truth for routing: `tools/routes.json`. Bundle for paste-in tools:
 | `templates/PAPER-DOSSIER.md` | Dossier template with machine card. |
 | `papers/` | One dossier per work. |
 | `data/papers.jsonl` | Machine-readable cards, built from dossiers by `python3 tools/build-cards.py`. |
+| `landscape/` | Broad AI safety map, SQLite database, portable graph exports, and DeepSeek collection ledger. |
+| `landscape/brainstorming/` | Dedicated concept guide, canonical idea records, and generated cards with speculative graph links. |
 
 ## projects/
 
@@ -72,6 +76,7 @@ Source of truth for routing: `tools/routes.json`. Bundle for paste-in tools:
 | `2026-10-apart-collusion-sprint/` | Track 2.3: epistemic plus factors for distinguishing collusion from correlated agreement. |
 | `2026-11-tara-project/` | TARA Round 2 2026 project topic: behavioral and mechanistic detection of correlated agreement versus collusion. |
 | `2026-11-apart-epistemics-sprint/` | Placeholder: ontology-aware oversight as a defense (Trust Infrastructure track, 2026-11-13 to 2026-11-15). |
+| `2026-10-ai-safety-landscape/` | Persistent broad AI safety research database and promotional search collection plan. |
 
 ## lab/
 
@@ -107,12 +112,15 @@ Source of truth for routing: `tools/routes.json`. Bundle for paste-in tools:
 |---|---|
 | `README.md` | How to open the guide, what each area covers, and how to keep it aligned with the Markdown sources. |
 | `index.html` | Static page shell: top bar, sidebar, search overlay, term drawer. No build step. |
+| `research.html` | Eight reading chapters, deterministic exercises, local notes, and three copy-ready project proposals. |
 | `assets/styles.css` | Light and dark themes, responsive layout, page and demo styles. |
 | `assets/app.js` | Hash routing, rendering, search, glossary, quizzes, and conditions workbench. |
 | `assets/demos.js` | Eight deterministic demonstrations, one per foundation F01 to F08. |
 | `assets/glossary-data.js` | Generated glossary data. Do not edit by hand. |
 | `assets/foundations-data.js` | Explainer content for F00 to F08, aligned with `foundations/`. |
 | `assets/site-data.js` | Lenses, reading path, eight regimes, and seven matched contrasts. |
+| `assets/research-data.js` | Generated study content from canonical guides and form answers. |
+| `assets/research.js`, `assets/research.css` | Study routing, exercises, self-checks, notes, search, and reading layout. |
 
 ## archive/
 

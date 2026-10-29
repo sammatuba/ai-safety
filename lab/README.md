@@ -16,6 +16,7 @@ Code that produces evidence. One `uv` project, Python 3.13, numpy only in the co
 | `llm.py` | the only network module; OpenAI-compatible; cached | `DECISIONS.md` D-005 |
 | `prompts.py` | every prompt verbatim | report appendix A |
 | `run.py` | `elab` command line | this file |
+| `landscape.py`, `landscape_views.py` | knowledge graph, mind map, source record, retrieval snapshot | [Landscape database](../literature/landscape/README.md) |
 
 ## Setup (once)
 
@@ -61,6 +62,14 @@ Every LLM response is cached in `data/cache/` by request hash. Re-running is fre
 Regime P always uses scripted agents (certain collusion). Regime F uses the scripted honest
 proposer plus injected coordination text, with LLM reviewers and decider, so the only
 difference from A is the talk.
+
+## Landscape research collection
+
+The [landscape database](../literature/landscape/README.md) persists broad AI safety research.
+Run `uv run python -m epistemic_lab.landscape --help` for collection and local search commands.
+DeepSeek Search and Fetch do not require a model inference call.
+The project plan controls promotional use and the spending limit.
+All network requests remain in `llm.py`.
 
 ## Notebooks
 

@@ -163,6 +163,7 @@
     nav.innerHTML =
       '<div class="nav-group">' +
         '<p class="nav-label">Start</p>' +
+        '<a class="nav-link" href="research.html"><span class="nav-num">↗</span><span class="nav-text">Research study companion</span></a>' +
         '<a class="nav-link ' + (route.name === "home" ? "active" : "") + '" href="#/">' +
           '<span class="nav-num">⌂</span><span class="nav-text">Overview</span>' +
         '</a>' +
