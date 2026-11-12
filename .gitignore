@@ -67,5 +67,4 @@ sources/*
 !/.agents/skills/meos-wrapup/SKILL.md
 # MEOS-SKILLS:END
 
-# Independent MEOS member repo (own git history; declared in .meos/project.json)
-projects/critical-infrastructure-research/
+# critical-infrastructure-research was promoted to the estate top level (2026-11-12).
