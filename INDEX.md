@@ -11,12 +11,13 @@ Source of truth for routing: `tools/routes.json`. Bundle for paste-in tools:
 | `concept` | `GLOSSARY.md`, `foundations/00-map.md`, then the numbered document | Terms, then the map, then depth. |
 | `sprint` | sprint `README.md`, `PLAN.md`, `PREREGISTRATION.md`, `design/regimes.md`, `design/auditors.md`, `hypotheses/HYPOTHESES.md` | Everything needed to run the sprint. |
 | `sprint-report` | `GLOSSARY.md`, sprint `README.md`, `report/OUTLINE.md`, `PREREGISTRATION.md`, hypotheses, `literature/INDEX.md` | Writing the submission. |
-| `tara` | TARA `README.md`, `TOPIC-SUBMISSION.md`, hypotheses, `literature/INDEX.md` | Topic submission and project plan. |
+| `tara` | TARA `README.md`, latest candidates and review, earlier `TOPIC-SUBMISSION.md`, hypotheses, `literature/INDEX.md` | Current proposals and historical form drafts. |
 | `code` | `lab/README.md`, `GLOSSARY.md`, hypotheses | Implementation. |
 | `paper` | `literature/EXTRACTION-RULES.md`, dossier template, `literature/INDEX.md` | Reading one paper into a dossier. |
 | `hypothesis` | `hypotheses/HYPOTHESES.md`, `threat-models.md`, `confounds.md` | Adding or revising a hypothesis. |
 | `plan` | `ROADMAP.md`, `DECISIONS.md`, `STATUS.md` | Re-planning. |
 | `study` | `study/STUDY-PLAN.md`, `GLOSSARY.md`, `foundations/00-map.md` | A learning session. |
+| `reviewer` | `study/REVIEWER.md`, reading path, latest proposals and review | Integrated study and research entry point. |
 | `landscape` | landscape `README.md`, landscape project `PLAN.md`, `topics.json`, `coverage.md` | Persistent field map, source database, and collection ledger. |
 | `brainstorm` | brainstorming guide, investigation study guide, prior-work review, candidate briefs, `ideas.json`, glossary, literature index | Conceptual grounds, teaching examples, speculative connections, and proposed experiments. |
 | `explainer` | `explainer/README.md`, `GLOSSARY.md`, `foundations/00-map.md` | Running or updating the interactive learning layer. |
@@ -97,13 +98,17 @@ Source of truth for routing: `tools/routes.json`. Bundle for paste-in tools:
 | `prompts/bootstrap.md` | Universal bootstrap prompt. |
 | `prompts/modes.md` | EXPLAIN, DECODE, DERIVE, TRACE, PAPER, CRITIQUE, QUIZ, SYNTHESIZE mode definitions. |
 | `study/STUDY-PLAN.md` | Week-by-week plan tied to the roadmap. |
+| `study/REVIEWER.md` | Integrated reviewer, exercises, research workflow, and repository map. |
 | `study/notes/` | Your concept and paper notes. |
+| `study/research-reading-2026-10-29.md` | Reconstructed reading path and worksheet for the latest three proposals. |
+| `prompts/handoff-2026-10-29.md` | Latest research session handoff and open questions. |
 | `study/quizzes/` | Self-check questions per foundations document. |
 | `templates/*.md` | concept-doc, experiment-brief, decision, preregistration, session-log, topic-submission. |
 | `tools/pack.py` | Bundle routed files for paste-in tools. |
 | `tools/check.py` | Synonyms, links, frontmatter, routes. |
 | `tools/build-cards.py` | Extracts dossier agent cards into `literature/data/papers.jsonl`. |
 | `tools/build-glossary.py` | Rebuilds the explainer glossary data from `GLOSSARY.md`. |
+| `tools/build-html-reader.py` | Builds the offline document reader from Git-visible Markdown. |
 | `tools/routes.json` | Routing table. |
 
 ## explainer/
@@ -111,6 +116,7 @@ Source of truth for routing: `tools/routes.json`. Bundle for paste-in tools:
 | File | One line |
 |---|---|
 | `README.md` | How to open the guide, what each area covers, and how to keep it aligned with the Markdown sources. |
+| `reviewer.html` | Interactive entry point for the written reviewer, study progress, notes, research, and library. |
 | `index.html` | Static page shell: top bar, sidebar, search overlay, term drawer. No build step. |
 | `research.html` | Eight reading chapters, deterministic exercises, local notes, and three copy-ready project proposals. |
 | `assets/styles.css` | Light and dark themes, responsive layout, page and demo styles. |
@@ -127,3 +133,8 @@ Source of truth for routing: `tools/routes.json`. Bundle for paste-in tools:
 | File | One line |
 |---|---|
 | `2026-10-20-research-starter.md` | The original scoping document. Frozen. Its bibliography is the seed of `literature/INDEX.md`. |
+
+
+## Dated session intake
+
+- [2026-11-09 critical-infrastructure intake](projects/critical-infrastructure-research/docs/intake/2026-11-09-misrouted-session.md): transferred from an unrelated product session; preserves exploratory scope.

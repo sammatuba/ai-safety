@@ -130,6 +130,28 @@ Mabuhay remains preexisting inspiration and was inspected read-only.
 No paid model experiment, commit, push, or publication is authorized by this decision.
 **Revisit.** After expert feedback, select a project, establish a budget, and update submission artifacts explicitly.
 
+## D-013 (2026-10-29): one reviewer for study and research navigation
+
+**Decision.** Use `study/REVIEWER.md` as the integrated written reviewer and
+`explainer/reviewer.html` as its interactive entry point. Link the existing guides and records.
+Keep canonical research files and historical drafts at their existing paths.
+**Reason.** The owner requested one entry point for deep study, research, and project navigation.
+Moving established files would break links and generated artifacts without improving their meaning.
+**Boundary.** The reviewer summarizes existing sources. It does not select a project or authorize paid runs.
+Browser notes and progress are local to the browser; users can download notes.
+**Revisit.** Update the reviewer and its navigation when the canonical project status or source material changes.
+
+## D-014 (2026-10-29): render repository documents in an offline reader
+
+**Decision.** Generate a local HTML reader bundle from Git-visible Markdown files.
+Route document links from the interactive guides to that reader.
+The Markdown files remain canonical. The reader links back to each source file.
+**Reason.** The owner requested smooth navigation between research documents.
+The bundle works from local files without a server or browser network access.
+**Boundary.** Exclude Git-ignored files, including private raw downloads and credentials.
+Rebuild the bundle after changing Markdown. Plain code paths remain code, not links.
+**Revisit.** Add richer mathematics rendering if source notation requires it.
+
 ## D-011 (2026-10-28): prepare the investigation idea and an interactive study path
 
 **Decision.** Prepare the ideas form around B17, investigation of faulty safety evaluations.
@@ -142,3 +164,15 @@ candidate briefs, idea records, and form answers. Include deterministic teaching
 **Boundary.** The interactive exercises are constructed examples, not model findings.
 The form proposal does not authorize inference spending or freeze a project hypothesis.
 The online form permits one submission; record completion only after observing its confirmation.
+
+
+## D-015 (2026-11-09): relocate the misrouted AI-safety session
+
+**Decision.** Store a labeled intake in the existing critical-infrastructure research project.
+Keep exact transferred notes in ignored sources/session-transfers for provenance.
+Remove the research sidecars and research addendum from mabuhay-edge after verifying their copies.
+**Reason.** The owner said the AI-safety prompt belonged in this repository and requested transfer and cleanup.
+**Boundary.** Preserve input-package implementation and unrelated work in the original project.
+Existing research decisions, hypotheses, code and results remain authoritative.
+The earlier handoff scenario is historical candidate material, not a selected research protocol.
+No model calls, production access, commit, push or submission is authorized by this transfer.

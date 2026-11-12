@@ -213,6 +213,7 @@ dependencies = [
 [package.optional-dependencies]
 dev = [
     { name = "jupytext" },
+    { name = "markdown-it-py" },
     { name = "matplotlib" },
     { name = "pytest" },
 ]
@@ -225,6 +226,7 @@ ml = [
 [package.metadata]
 requires-dist = [
     { name = "jupytext", marker = "extra == 'dev'", specifier = ">=1.16" },
+    { name = "markdown-it-py", marker = "extra == 'dev'", specifier = ">=3,<5" },
     { name = "matplotlib", marker = "extra == 'dev'", specifier = ">=3.9" },
     { name = "numpy", specifier = ">=2.0" },
     { name = "pytest", marker = "extra == 'dev'", specifier = ">=8" },

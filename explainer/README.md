@@ -9,11 +9,29 @@ truth, and it does not produce research findings.
 
 ## Open it
 
+Start with the [interactive research reviewer](reviewer.html) and its
+[written study guide](../study/REVIEWER.md). The reviewer links the interactive guides,
+current proposals, historical work, literature, and project records.
+Its checklist and notes are stored in the browser when available. Download notes for portability.
+
+Markdown links in the interactive guides open in the offline document reader.
+The reader renders Git-visible Markdown, preserves links and heading fragments, and links to each source.
+Ignored files are excluded. To refresh the generated bundle after changing Markdown, run:
+
+```bash
+cd lab
+uv run python ../tools/build-html-reader.py
+```
+
+The command uses the lab's development dependencies, including `markdown-it-py`.
+The browser reads the generated bundle locally; it does not fetch Markdown files.
+
 The new [research study companion](research.html) adds eight chapters on evidence,
 diagnosis, repair, and catastrophic-risk relevance. It includes expense and investigation
 exercises, focal-point and risk-pathway demonstrations, self-checks, local notes,
 and copy-ready answers for all three project ideas.
 Its readings come from the canonical brainstorming guides.
+Its form answers describe the 2026-10-28 portfolio, not the later 2026-10-29 proposals.
 Run `python3 tools/build-study-pages.py` after changing those guides or `form-answers.json`.
 
 There is no build step and no install. Open the page directly:
@@ -22,14 +40,14 @@ There is no build step and no install. Open the page directly:
 explainer/index.html
 ```
 
-A local server gives cleaner navigation and resolves the links to the Markdown sources:
+A local server gives cleaner navigation and resolves links to repository sources.
+Start it from the repository root, so the reviewer can reach other directories:
 
 ```bash
-cd explainer
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Then open <http://127.0.0.1:8000/>. Stop the server with Ctrl+C.
+Then open <http://127.0.0.1:8000/explainer/reviewer.html>. Stop the server with Ctrl+C.
 
 The page makes no network calls. All scripts are local classic scripts, so every route works
 from `file://` as well.
@@ -73,6 +91,9 @@ both as explanations of a method, not as evidence about a model.
 | File | Role |
 |---|---|
 | `index.html` | Page shell, top bar, sidebar, search overlay, term drawer, and script order. |
+| `reviewer.html`, `assets/reviewer.css`, `assets/reviewer.js` | Interactive entry point, study checklist, library search, and local notes. |
+| `reader.html`, `assets/reader*.js`, `assets/reader.css` | Offline document reader, link routing, and generated Markdown content. |
+| `../tools/build-html-reader.py` | Rebuilds the reader bundle from Git-visible Markdown files. |
 | `assets/styles.css` | Design system, light and dark themes, responsive layout, and demo styles. |
 | `assets/app.js` | Hash routing, page rendering, search, glossary drawer, quizzes, and the conditions workbench. |
 | `assets/demos.js` | The eight interactive demos, exposed as `window.DEMOS`. |

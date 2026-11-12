@@ -2,6 +2,140 @@
 
 Append-only log. Newest entry first. Each entry: date, what changed, what is blocked, next step.
 
+## 2026-11-09: Swarm Alignment hackathon entry, seven live handoff runs and report
+
+**Closed 2026-11-09.** Final title: "The One-Step Horizon: AI Agents Check the Work They Are Handed, Not
+the Work Behind It". Final PDF: `projects/critical-infrastructure-research/hackathon/REPORT.pdf` (main text
+within 8 pages, three figures, plain-language text, 16 references). Clean submission repository, private:
+https://github.com/sammatuba/one-step-horizon. The upload and the confirmation email are the owner's; not
+verified here. Neither working repository is committed. `tools/check.py` reports extra failures from the new
+`.venv` in the hackathon project. Operational learnings are in the Claude memory directory.
+
+**Changed.** Work is in `projects/critical-infrastructure-research/` (its own git repository).
+Added an Inspect AI task for the handoff workflow (`src/swarm_evidence/handoff_live.py`), a run
+script and a summary script (`scripts/run_live.py`, `scripts/summarize_live.py`), 13 offline
+tests (`tests/test_handoff_live.py`), a frozen plan with a budget line (`hackathon/PLAN.md`),
+saved result tables (`hackathon/results/`), and the report (`hackathon/REPORT.md`, built to
+`REPORT.pdf` with the official Swarm template through `hackathon/build_report.sh`). The report
+follows a question, evidence for, evidence against, resolution, matched experiment order.
+Revised `scripts/validate_research_handoff.py`: model trials now need a plan, a cap, and saved
+records. Updated that repository's `README.md` and `STATUS.json`.
+
+**Finding (prompt-conditioned, exploratory, small sample).** Three low-cost models through
+OpenRouter: `openai/gpt-6-luna`, `anthropic/claude-haiku-5.5`, `deepseek/deepseek-v4.1-flash`.
+- Pilot 1, 720 workflows, fault at a scripted collector, live preparer and publisher. The
+  preparer read the claimed artifact before its first write in 239 of 240 unprompted fault
+  workflows. A missing, stale, or wrong-entity source reached release in 1 of 360 workflows.
+  A wrong value that the collector wrote and claimed correctly was released in 119 of 120.
+- Pilot 2, 600 workflows, scripted preparer that trusts the claim, live publisher. The publisher
+  released the fault in 112 of 120 workflows with no control, 112 of 120 with a one-hop check
+  instruction, 27 of 120 with a whole-path instruction (0, 10, and 17 of 40 by model), and
+  0 of 120 under the host gate (true by construction).
+- Pilot 2b, 600 workflows, the pilot 2 task on three mid-tier models (`openai/gpt-6.1-terra`,
+  `anthropic/claude-sonnet-5.5`, `google/gemini-3.8-flash`): 93 of 120 with no control, 120 of
+  120 with the one-hop instruction, 0 of 120 with the whole-path instruction, 0 of 120 under the
+  host gate. With the one-hop instruction, claude-sonnet-5.5 read two or more artifacts in 0 of
+  40 fault workflows, against 38 of 40 with no control.
+- Pilot 3 (2,400 workflows, six models): paraphrased instructions and a live preparer that was
+  told not to check gave the same pattern. Three predictions written before the run held.
+- Pilot 4 (720 workflows): one worker that does both steps released a faulty source in 3 of 180
+  workflows with no rule. Pilot 5 (1,080 workflows): with no rule, the last worker built on the
+  fault in 7 of 72 workflows at distance 0 and in 72 of 72 at distances 1 to 3. One prediction
+  for pilot 5 did not hold (the whole-path rule did not weaken with distance).
+- Totals: seven runs, 6,120 workflows, 11.54 USD under a 12.00 USD cap (owner approved 10 USD more).
+- Report rewritten in plain language with three figures and a code-name appendix. Related work:
+  six cited papers read in full text by a subagent, six more works verified at partial depth
+  (notes in the hackathon repository, `hackathon/sections/rrl-fulltext.md` and `rrl-new.md`).
+- Pilot 2b was added after pilot 2, when the owner asked if the results were conclusive.
+- Pilot 2 was planned after pilot 1. The `efficiency_prompt` arm of pilot 1 was added after an
+  18-workflow smoke test. Both changes are disclosed in the plan and the report.
+
+**Verified.** 179 tests pass in the hackathon repository. Its handoff validator passes.
+All three runs (1,920 workflows) finished with 0 Inspect errors. Spend: 2.17 USD by OpenRouter
+key usage difference. The assistant set a 3.00 USD cap for pilots 1 and 2 because the owner gave
+no amount. The owner then approved a larger budget with no amount, and the assistant set 6.00 USD.
+
+**Blocked / unverified.**
+- The sprint deadline is 2026-11-09 11:59 UTC. Submission is the owner's action; not confirmed here.
+- The owner must confirm the Appendix B statements on dates of prior work and on LLM usage.
+- No single-agent matched control was run. No cited paper was re-read in this session; reading
+  depth comes from the hackathon repository's source ledger.
+- No commit or push in either repository.
+
+**Next.**
+1. Owner reads `REPORT.pdf`, confirms Appendix B, and submits through the sprint page.
+2. Follow-up study: a live preparer that skips the check, a single-agent matched control,
+   longer chains, and a host gate that compares payloads along the dependency path.
+3. Decide if this handoff result becomes part of the TARA project topic.
+
+## 2026-11-09: transferred the misrouted AI-safety session
+
+**Owner.** Move useful research into this repository and clear it from the input-management project.
+**Changed.** Added a labeled intake under the existing critical-infrastructure project.
+Preserved exact original notes, reading leads and SHA-256 hashes in ignored local sources/session-transfers.
+Recorded D-015. Linked the intake from the project README and repository index.
+**Cleanup.** Verified archived copies, then removed two misplaced research files and the research addendum from mabuhay-edge.
+Preserved its PLEXOS/input-package implementation and unrelated work.
+**Limits.** Imported proposals remain provisional. No existing hypothesis, experiment or research decision was replaced.
+No model calls, production access, commit, push or submission occurred.
+**Verified.** Archived originals match their SHA-256 hashes. The research handoff check passed.
+The parent checker retained 34 preexisting failures, with zero new failures or synonym warnings.
+The original product's input-package implementation remains present and the misplaced notes are removed.
+**Next.** Continue from the existing threat-model framework; reconcile imported reading leads before citation.
+
+## 2026-11-07: recovered the owner's TARA form entries
+
+**Owner:** recover the entries sent for the TARA proposals and write them down if no document holds them.
+**Done:** searched the Claude Code transcripts, the Claude prompt history, and the Codex prompt history.
+Claude Code held nothing after 2026-10-27; the 2026-10-28 and 2026-10-29 work ran in Codex sessions `01a1807a` and `01a18445`.
+Wrote all 16 owner messages from those sessions word for word to `projects/2026-11-tara-project/owner-entries-2026-10-28-29.md`.
+The three ideas themselves were already persisted in `TOPIC-SUBMISSION.md`, `form-answers.json`, and `candidate-ideas-2026-10-29.md`; they were not copied again.
+**Limits:** the file records what the owner sent to the assistant, not what the owner typed into the online form. No submission is recorded.
+`candidate-ideas-2026-10-29.md` replaces the web links of the final reply with literature ids and omits its closing recommendation.
+**Next:** if the exact submitted text matters, the owner should paste it from the form confirmation or browser history.
+
+## 2026-10-29: offline HTML reader for repository documents
+
+**Owner:** render Markdown as HTML for smoother navigation.
+**Done:** added a generated offline reader for Git-visible Markdown, with heading navigation,
+tables, code blocks, source links, and links between documents.
+The reviewer, foundations guide, older study companion, and landscape map route Markdown links to the reader.
+Markdown remains canonical. D-014 records the design and rebuild boundary.
+**Verification:** all 53 lab tests and repository and routing checks passed.
+Desktop and mobile browser checks covered local-file navigation, tables, code, headings, missing documents, and runtime errors.
+**Limits:** ignored Markdown files are excluded. Rebuild the bundle after editing documents.
+Raw HTML in Markdown is escaped; mathematical notation remains text.
+**Next:** use the reviewer to read and navigate the source material.
+
+## 2026-10-29: integrated research reviewer and project navigation
+
+**Owner:** create a comprehensive reviewer and one entry point for deep study and research.
+**Done:** added a written reviewer and interactive entry point with nine study modules,
+worked examples, current proposals, a research workflow, library search, local progress, and exportable notes.
+Linked the foundations guide, older companion, landscape map, repository index, and task bundles.
+Distinguished the latest portfolio from the earlier form answers. D-013 records the navigation decision.
+Existing research artifacts remain at their established paths.
+**Verification:** all 53 lab tests passed. Repository and routing checks passed.
+Desktop and mobile browser checks covered filtering, progress and note persistence, library search, and page errors.
+**Failures:** the first documentation patch was rejected without applying; the corrected patch succeeded.
+Sandbox restrictions blocked the first lab and browser checks; approved reruns succeeded.
+The first browser check found a missing search synonym; the library description was corrected and the rerun passed.
+**Limits:** browser progress and notes are local; download notes for portability.
+The reviewer summarizes existing sources and does not establish new findings or authorize model spending.
+**Next:** open `explainer/reviewer.html`, work through the study path, and seek feedback on the current proposals.
+
+## 2026-10-29: session recovery and navigation repair
+
+**Owner:** resume the previous session; the repository was pushed as a save-all snapshot and still needs organization.
+**Done:** inspected the handoff and the current Git state. Reconstructed the missing reading path from surviving materials.
+Updated the TARA and root entry points to distinguish the latest proposals from the earlier form drafts.
+Corrected the handoff's obsolete working-tree and bundle claims and removed obsolete first-commit instructions.
+The local `main` and recorded `origin/main` both pointed to `ff76ba7` before these edits.
+**Limits:** the original reading path and claimed portable reading archive were not found in this checkout.
+Ignored raw trajectories and local backups are not included in the Git snapshot.
+No project selection, model run, commit, or push occurred in this recovery.
+**Next:** read the reconstructed path and obtain feedback on the latest proposals; clarify any broader repository organization desired.
+
 ## 2026-10-29: full-method prior-work pass and refined three-idea drafts
 
 **Owner:** check prior research, then complete refinement and return three ideas.

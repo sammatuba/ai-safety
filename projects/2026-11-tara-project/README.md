@@ -1,31 +1,35 @@
 ---
 title: "TARA project ideas and interactive study path"
 status: draft
-updated: 2026-10-28
+updated: 2026-10-29
 depends_on: ["DECISIONS.md", "literature/landscape/brainstorming/candidate-briefs.md", "projects/2026-11-tara-project/form-answers.json"]
 ---
 
 # TARA project ideas and interactive study path
 
 The owner will submit the ideas form manually. The form permits up to three ideas and one submission.
-The [copy-ready answers](TOPIC-SUBMISSION.md) provide all three ideas discussed on 2026-10-28.
-Their canonical text is in [form-answers.json](form-answers.json).
+The [latest proposals](candidate-ideas-2026-10-29.md) contain the three directions refined on 2026-10-29.
+The [copy-ready answers](TOPIC-SUBMISSION.md) and [form-answers.json](form-answers.json)
+preserve the earlier 2026-10-28 ideas. They have not been updated to the latest portfolio.
 Feasibility scores and area labels are suggestions for the owner to choose.
 
 ## Current ideas
 
-1. Finding and fixing failures in artificial intelligence (AI) safety evaluations: diagnosis, repair, and immediate permission.
-2. Evidence checks that prevent false assurance: compare representation with access to independent artifacts.
-3. Transformations against coordination cues: a bounded replication and defense comparison.
+1. Human cancellation across delegated tasks and replanning.
+2. Safety outcome labels and the evaluator's choice of follow-up tests.
+3. Safety responsibility for interactions between tasks.
 
-The [candidate briefs](../../literature/landscape/brainstorming/candidate-briefs.md) give controls, measures, and stop conditions.
-The [prior-work review](../../literature/landscape/brainstorming/prior-work-review.md) identifies direct predecessors.
+The [reading path](../../study/research-reading-2026-10-29.md) and
+[latest review](../../literature/landscape/brainstorming/review-2026-10-29.md) support further study.
+The earlier [candidate briefs](../../literature/landscape/brainstorming/candidate-briefs.md) and
+[prior-work review](../../literature/landscape/brainstorming/prior-work-review.md) remain available.
 The proposals make no novelty claim or claim about independently formed harmful objectives.
 
 ## Study and exploration
 
 Open the [interactive study companion](../../explainer/research.html).
 It has eight reading chapters, deterministic exercises, self-checks, notes, and form-field copy buttons.
+Its form answers describe the earlier portfolio, not the 2026-10-29 proposals.
 The underlying [study guide](../../literature/landscape/brainstorming/investigation-study-guide.md) remains canonical.
 The [knowledge map](../../literature/landscape/explore.html#brainstorming) links all seventeen brainstorm records.
 
@@ -35,6 +39,11 @@ No online submission is recorded. The owner will fill personal fields and collab
 No experiment budget, model access, sample size, or final project plan is fixed.
 The program's project dates and submission deadline still require confirmation from the program.
 Preparing this form does not authorize paid model calls.
+
+## Owner entries
+
+The owner's own messages from the two Codex sessions of 2026-10-28 and 2026-10-29 are recorded word for word in
+[owner-entries-2026-10-28-29.md](owner-entries-2026-10-28-29.md). They include the blank form template.
 
 ## Earlier proposal
 

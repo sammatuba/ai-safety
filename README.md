@@ -14,9 +14,13 @@ it. Every citation points to a verified source.
 
 ## Start here
 
+Open the [interactive research reviewer](explainer/reviewer.html) for one study and research entry point.
+The [written reviewer](study/REVIEWER.md) contains the full study path and research exercises.
+
 | If you want to | Open |
 |---|---|
 | See what is happening now | `STATUS.md` |
+| Resume the latest research session | [Session handoff](prompts/handoff-2026-10-29.md) and [reading path](study/research-reading-2026-10-29.md) |
 | See the whole plan with dates | `ROADMAP.md` |
 | Explore the broader AI safety landscape | [Research maps and source database](literature/landscape/README.md) |
 | Brainstorm specific research projects | [Concept guide and idea bank](literature/landscape/brainstorming/README.md), or the map's Brainstorming tab |
@@ -85,10 +89,7 @@ Use glossary terms verbatim. Label statement kinds. Never invent a citation. Agr
 not collusion. Prompt-conditioned behavior is not learned behavior. Dates are absolute.
 Full contract: `AGENTS.md`.
 
-## First commit
+## Repository history
 
-The repository is initialized but nothing is committed. When ready:
-
-```
-git add -A && git commit -m "Scaffold ai-safety research repository (2026-10-23)"
-```
+The research repository has been committed. Raw trajectories, local backups, and secrets are ignored by Git.
+See `STATUS.md` for the session history and outstanding work.
